@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",sans-serif}
+html,body{width:620px;height:800px;background:#fff}
+.banner{background:#0e5e4e;height:72px;display:flex;align-items:center;padding:0 22px;gap:12px}
+.logo{width:44px;height:44px;object-fit:contain;display:block}
+.bt b{color:#fff;font-size:20px;font-weight:800;letter-spacing:.5px;display:block;line-height:1.15}
+.bt span{color:#cfe3dd;font-size:12px;letter-spacing:1px}
+.body{padding:44px 40px 0;text-align:center}
+h1{color:#17352d;font-size:34px;font-weight:800;letter-spacing:1px}
+.subt{color:#8a938f;font-size:15px;letter-spacing:4px;margin-top:12px}
+.date{color:#0e5e4e;font-size:30px;font-weight:800;margin-top:22px;letter-spacing:1px}
+.stat{color:#d9541e;font-size:15px;font-weight:600;margin-top:12px}
+.author{color:#9aa19d;font-size:13px;margin-top:8px}
+.qrbox{width:300px;height:300px;margin:26px auto 0;border:3px solid #d7e3df;border-radius:22px;display:flex;align-items:center;justify-content:center}
+.qrbox img{width:250px;height:250px}
+.tip{color:#17352d;font-size:18px;font-weight:700;margin-top:22px}
+.tip2{color:#9aa19d;font-size:13px;margin-top:8px;letter-spacing:1px}
+</style></head><body>
+<div class="banner">
+  <img class="logo" src="data:image/png;base64,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">
+  <div class="bt"><b>WiseLaw</b><span>商业运行动态看板</span></div>
+</div>
+<div class="body">
+  <h1>宜兴市重点企业商业动态</h1>
+  <div class="subt">每 日 商 业 动 态 参 阅</div>
+  <div class="date">2026-07-30</div>
+  <div class="stat">共 26 条重点动态 · 对宜启示</div>
+  <div class="author">编制：宜兴市商务局</div>
+  <div class="qrbox"><div id="qr"></div></div>
+  <div class="tip">微信长按识别二维码查看</div>
+  <div class="tip2">每日更新 · 无需复制链接</div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@master/qrcode.min.js"></script>
+<script>
+new QRCode(document.getElementById("qr"),{text:"https://api.lexoavatar.com/pages/yixing-daily-v2-20260730.html",width:250,height:250,colorDark:"#0e5e4e",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+document.title="READY";
+</script>
+</body></html>

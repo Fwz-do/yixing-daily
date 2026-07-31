@@ -1,0 +1,7 @@
+[project]
+name = "宜兴商务局日报采集文件夹"
+workspace_path = "/Users/yxswj/WiseProject/workspace-1"
+repo_name = "workspace-1"
+
+[context]
+source = "/Users/yxswj/WiseProject/contact-9/宜兴商务局日报采集文件夹"

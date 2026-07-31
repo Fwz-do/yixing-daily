@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>宜兴市重点企业商业动态 · 每日参阅</title>
+<meta property="og:title" content="宜兴市重点企业商业动态 · 2026-07-31"/>
+<meta property="og:description" content="当日/昨日重点动态 + 对宜启示，每日更新"/>
+<style>
+:root{
+  --brand:#0E5E4E; --brand2:#12876E; --accent:#C8622D; --accent2:#E08A3C;
+  --bg:#f4f6f5; --card:#ffffff; --ink:#1c2b28; --sub:#5f6f6b; --line:#e6ebe9;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding-bottom:40px}
+.topbar{background:var(--brand);color:#fff;display:flex;align-items:center;gap:10px;padding:12px 16px}
+.topbar .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#19a884,#0E5E4E);display:flex;align-items:center;justify-content:center;font-size:18px}
+.topbar b{font-size:15px;letter-spacing:.5px}
+.topbar span{font-size:11px;opacity:.8;display:block;font-weight:400}
+.hero{background:linear-gradient(160deg,var(--brand) 0%,var(--brand2) 100%);color:#fff;padding:20px 18px 18px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%)}
+.hero h1{font-size:17px;font-weight:800;letter-spacing:.5px}
+.hero .sub{font-size:12.5px;opacity:.9;margin-top:3px;font-weight:500}
+.hero .date{display:inline-block;font-size:13px;font-weight:700;margin-top:5px;font-variant-numeric:tabular-nums;opacity:.95}
+.hero .meta{font-size:10.5px;opacity:.8;margin-top:4px}
+.hero .chip{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 11px;font-size:11px;margin-top:6px;margin-left:8px}
+.tools{background:#fff;padding:12px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.search{width:100%;border:1px solid var(--line);background:#f7f9f8;border-radius:10px;padding:11px 14px;font-size:14px;outline:none}
+.search:focus{border-color:var(--brand2);background:#fff}
+.filters{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}
+.filters select{flex:1;min-width:120px;border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-size:13px;background:#fff;color:var(--ink)}
+.btns{display:flex;gap:8px;margin-top:9px}
+.btn{flex:1;border:none;border-radius:9px;padding:9px;font-size:13px;font-weight:600;cursor:pointer}
+.btn.reset{background:#eef2f1;color:var(--sub)}
+.btn.export{background:var(--accent);color:#fff}
+.countbar{padding:10px 16px 2px;font-size:12px;color:var(--sub)}
+.countbar b{color:var(--brand);font-size:14px}
+.list{padding:12px;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border-radius:14px;box-shadow:0 3px 14px rgba(20,50,45,.06);border:1px solid var(--line);padding:15px 16px 16px;position:relative}
+.card .top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.seq{background:var(--brand);color:#fff;font-size:12px;font-weight:700;min-width:24px;height:24px;padding:0 6px;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
+.badge.type{background:#fbeee3;color:var(--accent)}
+.badge.ind{background:#e7f2ee;color:var(--brand)}
+.badge.city{background:#eaf3f7;color:#2b6b86}
+.badge.date{background:#eef1f0;color:var(--sub);margin-left:auto}
+.card h3{font-size:16.5px;font-weight:700;line-height:1.45}
+.card .summary{font-size:13.5px;color:#46534f;margin-top:8px}
+.rel{margin-top:12px;background:#f0f7f4;border-left:3px solid var(--brand2);border-radius:0 8px 8px 0;padding:10px 12px}
+.rel .lab{font-size:11px;font-weight:700;color:var(--brand);letter-spacing:1px}
+.rel p{font-size:13px;color:#2f4a44;margin-top:3px}
+.foot{margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.srclink{font-size:12.5px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:2px}
+.srclink:active{opacity:.6}
+.cdate{font-size:11.5px;color:var(--sub)}
+.tabs{position:sticky;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -3px 14px rgba(0,0,0,.07)}
+.tab{flex:1;text-align:center;padding:12px;font-size:14px;font-weight:700;border-radius:11px;background:#eef2f1;color:var(--sub);cursor:pointer;border:1px solid var(--line)}
+.tab.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.hnote{font-size:11.5px;color:var(--sub);padding:10px 16px 0;line-height:1.6}
+.hide{display:none}
+.empty{text-align:center;color:var(--sub);padding:50px 20px;font-size:14px}
+.pgfoot{text-align:center;font-size:11px;color:#9aa8a4;padding:18px 20px;line-height:1.8}
+
+.view-tabs{display:flex;gap:0;background:#fff;border-bottom:2px solid var(--brand);position:sticky;top:0;z-index:30}
+.view-tab{flex:1;text-align:center;padding:14px 8px;font-size:14px;font-weight:700;color:var(--sub);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .2s}
+.view-tab.on{color:var(--brand);border-bottom-color:var(--brand);background:#eef5f2}
+.day-tabs{display:flex;gap:10px;padding:10px 14px;background:#fff;position:sticky;bottom:0;z-index:40;border-top:1px solid var(--line);box-shadow:0 -3px 14px rgba(0,0,0,.08)}
+.day-tab{flex:1;text-align:center;padding:13px;font-size:14px;font-weight:700;color:var(--sub);cursor:pointer;border:1px solid var(--line);background:#eef2f1;border-radius:11px}
+.day-tab.on{color:#fff;background:var(--brand);border-color:var(--brand)}
+.grp{margin:14px 0 6px;padding:10px 14px;border-radius:10px;font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px}
+.grp.tier1{background:linear-gradient(120deg,#B7791F,#D9A441);color:#fff;border-left:6px solid #7a5310}
+.grp.tier2{background:linear-gradient(120deg,#0E5E4E,#17A883);color:#fff;border-left:6px solid #073d32}
+.grp.tier3{background:linear-gradient(120deg,#C8622D,#E88B3D);color:#fff;border-left:6px solid #8f4315}
+.grp.track{background:#0E5E4E;color:#fff;border-left:6px solid rgba(0,0,0,.2)}
+.grp.hist{background:linear-gradient(120deg,#0E5E4E,#17A883);color:#fff;border-left:6px solid #073d32}
+.grp .gn{font-size:12px;color:inherit;opacity:.85;font-weight:500}
+.co-name{font-size:19px;font-weight:800;color:var(--brand);line-height:1.35;margin-bottom:6px;letter-spacing:0.5px}
+.gist{font-size:14.5px;font-weight:700;color:var(--ink);margin-top:8px;line-height:1.5;padding:7px 12px;background:#eef5f2;border-radius:8px}
+.body-text{font-size:13.5px;color:#46534f;margin-top:9px;line-height:1.65}
+.hist-card{background:var(--card);border-radius:10px;border:1px solid var(--line);padding:12px 14px;margin-bottom:8px}
+.hist-card .hc-co{font-size:15px;font-weight:700;color:var(--brand)}
+.hist-card .hc-title{font-size:13px;color:var(--ink);margin-top:4px}
+.hist-card .hc-meta{font-size:11px;color:var(--sub);margin-top:4px}
+.hist-card .hc-rel{font-size:12px;color:#46534f;margin-top:6px;padding:5px 8px;background:#f0f7f4;border-radius:6px}
+</style>
+</head>
+<body>
+<div id="pass-gate" style="position:fixed;inset:0;z-index:99999;background:radial-gradient(ellipse at 50% 32%,#12876E 0%,#0E5E4E 55%,#0a4438 100%);display:flex;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+  <div style="background:rgba(255,255,255,.97);border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.35);padding:42px 30px 34px;width:100%;max-width:400px;text-align:center">
+    <svg width="64" height="64" viewBox="0 0 100 100" style="margin:0 auto 22px;display:block" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="lp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19a884"/><stop offset="1" stop-color="#0E5E4E"/></linearGradient></defs>
+      <g fill="url(#lp)"><path d="M50 14c7 12 7 26 0 40-7-14-7-28 0-40z"/><path d="M50 54C40 44 28 40 16 42c2 14 14 24 34 24z" opacity=".92"/><path d="M50 54c10-10 22-14 34-12-2 14-14 24-34 24z" opacity=".92"/><path d="M50 58C42 46 30 41 20 40c-4 12 2 26 30 30z" opacity=".7"/><path d="M50 58c8-12 20-17 30-18 4 12-2 26-30 30z" opacity=".7"/></g>
+    </svg>
+    <div style="font-size:21px;font-weight:800;color:#1c2b28;margin-bottom:16px;letter-spacing:.5px">宜兴市重点企业商业动态</div>
+    <div style="font-size:13.5px;color:#5f6f6b;line-height:1.9;margin-bottom:26px">本页面信息属于宜兴商务局<br/>请输入密码继续访问</div>
+    <input id="pass-input" type="password" inputmode="numeric" placeholder="请输入密码" autocomplete="off"
+      style="width:100%;border:1.5px solid #d6e0dd;background:#f5f8f7;border-radius:13px;padding:15px 18px;font-size:15px;color:#1c2b28;outline:none;text-align:center;letter-spacing:2px"/>
+    <div id="pass-err" style="display:none;color:#d64545;font-size:12.5px;margin-top:11px">密码错误，请重试</div>
+    <button id="pass-btn" style="width:100%;margin-top:18px;border:none;border-radius:13px;padding:15px;font-size:16px;font-weight:700;color:#fff;background:linear-gradient(90deg,#12876E 0%,#0E5E4E 100%);cursor:pointer;letter-spacing:4px">进入</button>
+  </div>
+</div>
+<script>
+(function(){
+  var PW="123456", KEY="yx_daily_0730_ok";
+  var gate=document.getElementById('pass-gate'),inp=document.getElementById('pass-input'),
+      err=document.getElementById('pass-err'),btn=document.getElementById('pass-btn');
+  function unlock(){gate.parentNode.removeChild(gate);document.body.style.overflow='';}
+  function tryPw(){if(inp.value===PW){try{sessionStorage.setItem(KEY,'1')}catch(e){}unlock();}else{err.style.display='block';inp.value='';inp.focus();}}
+  try{if(sessionStorage.getItem(KEY)==='1'){unlock();return;}}catch(e){}
+  document.body.style.overflow='hidden';
+  btn.addEventListener('click',tryPw);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')tryPw();});
+  setTimeout(function(){inp.focus();},300);
+})();
+</script>
+<div class="wrap">
+  <div class="topbar">
+    <div class="logo">🏙️</div>
+    <div><b>宜兴重点企业商业动态</b><span>每日参阅 · Daily Brief</span></div>
+  </div>
+  <div class="hero">
+    <h1>宜兴市重点企业商业动态</h1>
+    <div class="sub">每日商业动态参阅 · 企业版</div>
+    <div class="date">2026-07-31</div>
+    <div class="meta">编制：宜兴市商务局 · 来源：交易所公告 / 权威财经媒体 / 政府官网</div>
+    <div class="chip">共 <span id="chipN">14</span> 条重点动态 · 对宜启示</div>
+  </div>
+  <div id="dayView">
+    <div class="view-tabs">
+      <div class="view-tab on" data-v="local" onclick="switchView('local')">📍 本地企业</div>
+      <div class="view-tab" data-v="chain" onclick="switchView('chain')">🔗 3+3+N 产业链</div>
+      <div class="view-tab" data-v="track" onclick="switchView('track')">🎯 重点赛道</div>
+    </div>
+    <div class="countbar">当前显示 <b id="cnt">6</b> 条</div>
+    <div class="list" id="list"></div>
+  </div>
+  <div id="histView" style="display:none">
+    <div class="toolbar" style="padding:12px 14px 4px">
+      <input class="search" id="q" placeholder="🔍 搜索历史动态 / 企业 / 关键词…"/>
+      <div class="filters">
+        <select id="fInd"><option value="">全部产业领域</option></select>
+        <select id="fType"><option value="">全部事项分类</option></select>
+        <select id="fCity"><option value="">全部城市</option></select>
+        <select id="fCo"><option value="">全部企业</option></select>
+      </div>
+      <div class="btns">
+        <button class="btn reset" onclick="reset()">重置</button>
+        <button class="btn export" onclick="exportXLSX()">⬇ 导出 Excel</button>
+      </div>
+    </div>
+    <div class="countbar">历史动态 <b id="histCnt">0</b> 条</div>
+    <div class="list" id="histList"></div>
+  </div>
+  <div class="pgfoot">
+    本简报由宜兴市商务局参阅编制 · 数据来源于公开渠道，仅供内部参考<br/>
+    每日更新 · 2026-07-31
+  </div>
+  <div class="day-tabs">
+    <div class="day-tab on" id="tabDay" onclick="switchMode('day')">📅 当日动态</div>
+    <div class="day-tab" id="tabHist" onclick="switchMode('hist')">🗂 历史动态</div>
+  </div>
+</div>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script>
+
+// ===== TAB 1: 本地企业 (FULL DETAIL) =====
+const DATA_LOCAL=[
+{co:"博睿新能",ind:"新能源",type:"项目封顶/投产",date:"07-30",
+ title:"博睿新能宜兴储能项目厂房封顶，年内建成投产将形成年产2GW物理储能设备产能",
+ summary:"据新华社江苏7月30日报道，位于宜兴的博睿新能储能项目厂房主体已于7月顺利封顶，预计年内建成投产，届时形成年产2GW物理储能设备系统的产能。物理储能区别于主流锂电化学储能，主打长时、安全、循环寿命长，是新型电力系统对4小时以上长时储能需求增长背景下的新兴技术方向。",
+ rel:"博睿新能项目落地丰富了宜兴储能产业的技术路线。宜兴此前储能集群以远东电池的锂电／钠电化学储能为主，博睿新能补上了物理储能这一环，使宜兴在化学储能＋物理储能两条路线上都有布局。年产2GW的设备产能规模可观，年内投产将为宜兴新能源装备板块贡献新的产值增量。对宜兴而言，储能技术路线的多元化有助于对冲单一路线的技术与政策风险，增强产业集群韧性。",
+ city:"宜兴",src:"新华网",url:"http://js.news.cn/20260730/d746a2ee93464a34be81ff06fb7cf5da/c.html"},
+{co:"卓易信息",ind:"通用人工智能",type:"股份回购/专项贷款",date:"07-30",
+ title:"卓易信息回购落地首笔1399万元，获中国银行无锡分行3600万元回购专项贷款",
+ summary:"卓易信息7月23日首次实施股份回购，回购14万股（占总股本0.1156%），耗资约1398.79万元；7月30日进一步获得中国银行无锡分行出具的股票回购专项贷款承诺函，额度不超过3600万元、期限3年。本次回购计划总额2000万-4000万元，回购价不超过186元/股，期限不超过3个月。公司2025年归母净利润7973.72万元、同比大增142.79%，主营BIOS／BMC固件与云计算基础服务。",
+ rel:"卓易信息回购从计划进入落地，并罕见引入银行专项贷款支持，释放出管理层认为股价被低估的明确信号。用低成本贷款资金回购、锁定核心资产，是上市公司维护价值的成熟做法。对宜兴而言，卓易是本地在科创板上市、在BIOS／BMC固件领域具备全国独特技术壁垒的AI算力底座企业，其稳健的资本运作和2025年净利翻倍的业绩，说明这家小而美的科技公司正处上升通道，是宜兴通用人工智能板块值得长期重视的棋子。",
+ city:"宜兴",src:"财中社",url:"https://m.jrj.com.cn/madapter/finance/2026/07/23170457882284.shtml"},
+{co:"恒兴新材",ind:"新材料",type:"业绩预增",date:"07-13",
+ title:"恒兴新材半年度净利预增44%-72%，精细化工复苏叠加高毛利产品放量",
+ summary:"恒兴新材7月13日发布半年度业绩预告，预计上半年归母净利润4200万-5000万元，同比增长44.26%-71.73%；扣非净利润3700万-4500万元，同比增57%-90.94%。公司将增长归因于精细化工行业复苏、下游需求回暖，以及有机酯、有机酮等高附加值核心产品在高端制造、食品香料、医药中间体领域销量突出、产能利用率改善。半年报预计8月27日披露。",
+ rel:"恒兴新材业绩高增印证了宜兴精细化工产业的复苏动能。在7月29日刚宣布投资6亿元向湿电子化学品和锂电材料延伸之后，这份预增预告说明恒兴的传统基本盘同样稳健——转型不是被迫求生，而是守正出奇。有机酯／有机酮等产品切入医药中间体、电子材料等高端领域，与宜兴半导体（中环领先、雅克）和新能源（宜锂、远东电池）产业链形成潜在配套。对宜兴而言，一家现金流健康、又在向高端材料主动升级的精细化工企业，是产业结构优化的优质样本。",
+ city:"宜兴",src:"紫金财经",url:"https://finance.sina.com.cn/stock/bxjj/2026-07-13/doc-inihrxce9035945.shtml"},
+{co:"中晟高科",ind:"节能环保",type:"业绩预警/储能",date:"07-15",
+ title:"中晟高科半年度预亏1000万-1300万同比转亏，宜兴60MW/120MWh储能电站项目推进中",
+ summary:"中晟高科7月15日发布半年度业绩预告，预计2026上半年归母净利润亏损1000万-1300万元，同比由盈转亏。与此同时，公司转型第二增长曲线的动作在持续：位于宜兴新建镇的60MW／120MWh储能电站项目按计划推进建设，年初已控股无锡普睿能源切入储能业务。传统润滑油／环保主业承压，是其向储能＋新材料多轮驱动转型的直接动因。",
+ rel:"中晟高科的短期预亏与储能转型并存，折射宜兴中型环保企业寻找第二曲线的普遍焦虑与努力。传统环保工程与润滑油业务天花板已现、利润承压，倒逼企业向储能等高景气赛道延伸。60MW／120MWh电站是其从卖设备／工程向持有运营储能资产模式探索的关键一步。对宜兴而言，这类企业的转型阵痛期需要关注——短期业绩波动是转型代价，能否成功切换赛道决定其中长期价值，政府在储能项目并网、电力交易等环节的支持将影响转型成败。",
+ city:"宜兴",src:"东方财富",url:"https://finance.eastmoney.com/a/202607273822294540.html"},
+{co:"立霸股份",ind:"高端装备",type:"股价异动/股东转让",date:"07-23",
+ title:"立霸股份连续异动累计跌超20%，公司澄清主营正常、5%以上股东完成协议转让",
+ summary:"立霸股份7月20日、22日、23日连续发布股票交易异常波动公告，收盘价跌幅偏离值累计超20%。公司澄清家电用复合材料主业生产经营正常，订单、原材料、产销规模无重大变化，无业务转型等重大事项，上半年经营业绩测算未触及业绩预告披露标准。此前7月2日，公司持股5%以上股东通过公开征集转让方式完成股份协议转让并实施2025年度权益分派。Q1营收3.95亿元、归母净利3381万元。",
+ rel:"立霸股份的股价异动更多是市场情绪波动而非基本面变化，公司及时澄清体现了规范的信息披露。对宜兴而言，立霸是本地复合材料领域的上市企业，其高端装备＋新材料的交叉定位有向数据中心、新能源等新场景延伸的潜力，但当前主业仍以家电复合材料为主、增长平稳。这也提示本地传统制造上市公司：在算力、储能等题材普涨的行情中，唯有真正切入高景气赛道、拿出实质订单，才能获得可持续的价值重估。",
+ city:"宜兴",src:"东方财富",url:"https://wap.eastmoney.com/a/202607223817340238.html"}
+];
+
+// ===== TAB 2: 3+3+N 产业链 (FULL DETAIL) =====
+const DATA_CHAIN=[
+{co:"远东股份",ind:"电线电缆",tier:"tier1",type:"股价涨停/扭亏",date:"07-31",
+ title:"远东股份7月31日涨停，2025年扭亏为盈、单月订单超17-26亿，处置电池资产优化运营",
+ summary:"远东股份7月31日盘中涨停、报14.1元涨9.98%，市场归因于公司2025年扭亏为盈、经营现金流改善，叠加多次披露单月订单规模超17亿-26亿元（集中在电网、储能、AI配套等高景气赛道）及AIDC光纤预制棒定增推进。7月29日，控股孙公司江苏远东电池将部分资产分别以3930.11万元、7058.85万元处置给宁波精研良造、江苏吉厚智能，以提高资产运营效率。",
+ rel:"远东股份股价扭亏反弹是宜兴龙头企业经营质量修复的直观信号。作为宜兴最大制造业企业，远东同时握有电网电缆（稳健基本盘）、储能（出海放量）、AIDC光纤（AI基建新增长极）三条高景气主线，单月订单17-26亿的体量印证需求旺盛。值得注意的是电池板块的资产处置——远东正剥离低效电池资产、聚焦储能系统集成与钠电轻资产路线，这种做减法的战略定力比盲目扩张更可贵。对宜兴而言，龙头企业经营质量的实质改善，是整个产业集群健康度的晴雨表。",
+ city:"宜兴",src:"中国证券报",url:"https://paper.cnstock.com/html/2026-07/31/content_2250286.htm"},
+{co:"中超控股",ind:"电线电缆",tier:"tier1",type:"项目建设/航空航天",date:"07-24",
+ title:"中超控股定增注册获批后航空航天项目进入建设阶段，高温合金精密铸造打开第二曲线",
+ summary:"继7月27日定增注册获证监会批复后，中超控股7月24日在投资者互动平台披露，募投的航空航天发动机及燃气轮机高端零部件制造项目已完成备案、环评等审批手续，目前处于建设阶段、厂房尚未封顶。公司通过一级子公司上海精铸及其全资子公司江苏精铸从事高温合金精密铸件制造，产品应用于航空航天发动机与燃气轮机。电缆主业则由子公司中标国网16.45亿元项目支撑。",
+ rel:"中超控股航空航天项目从获批进入开建，标志宜兴电缆龙头的高端制造转型进入实质落地期。高温合金精密铸造是航空发动机、燃气轮机的核心工艺，技术壁垒高、附加值远超传统电缆，是典型的卡脖子进口替代赛道。对宜兴而言，中超走的电缆稳基本盘＋航空航天拓新曲线路径，与远东的电缆＋AI基建＋储能形成呼应——两大电缆龙头都在把传统制造能力向高端、高技术领域迁移，这正是宜兴传统优势产业向新质生产力升级的缩影。",
+ city:"宜兴",src:"证券时报",url:"https://stock.stockstar.com/RB2026072700032798.shtml"},
+{co:"雅克科技",ind:"集成电路",tier:"tier2",type:"供应链/长鑫上市",date:"07-30",
+ title:"长鑫科技科创板上市，雅克科技作为核心前驱体供应商深度受益国产存储扩产",
+ summary:"据新华社7月30日报道，长鑫科技在上交所科创板上市，宜兴企业雅克科技、中环领先被列为其上游供应链的重要组成——雅克是国内高端半导体前驱体材料核心供应商、市占率跻身全球前三，为长鑫DRAM制造配套关键材料。同期雅克7月29日公告三级子公司向参股公司提供财务资助、召开第七届董事会第三次会议。公司Q1收入19.73亿元、归母净利2.67亿元，半年报定于8月26日披露。",
+ rel:"长鑫科技登陆科创板，为雅克科技打开了国产存储芯片扩产的确定性需求空间。长鑫是国内DRAM／HBM国产化的主力军，其上市募资扩产将直接拉动前驱体材料需求，而雅克作为全球前三的供应商深度绑定这一国产替代大趋势。对宜兴而言，雅克与中环领先同时进入长鑫供应链，意味着宜兴半导体材料双龙头已嵌入国产存储产业链的核心环节——这是宜兴在国家半导体自主可控战略中不可替代产业地位的最新佐证。",
+ city:"宜兴",src:"新华网",url:"http://js.news.cn/20260730/d746a2ee93464a34be81ff06fb7cf5da/c.html"},
+{co:"中环领先",ind:"集成电路",tier:"tier2",type:"供应链/产能扩张",date:"07-30",
+ title:"中环领先配套长鑫DRAM硅片，8英寸产能冲月140万片、深圳新建12英寸项目启动",
+ summary:"随长鑫科技科创板上市，中环领先作为其上游硅片核心供应商受到关注——公司是国内全品类半导体大硅片重要厂商，硅片产能与产量居国内首位、全球第六，为长鑫DRAM制造配套硅片。产能方面，8英寸目标2026年达月产140万片（宜兴、天津、呼和浩特协同），并宣布在深圳新建12英寸大硅片项目、建设期60个月。宜兴基地12英寸产线已稳定运行多年。",
+ rel:"中环领先绑定长鑫DRAM，强化了宜兴在半导体硅片国产替代中的核心地位。12英寸大硅片是先进制程芯片的基础材料，长期被日本信越、胜高垄断，中环实现国产替代并配套国产存储龙头，意义重大。深圳新项目虽落子外地，但研发与技术中枢仍在宜兴，宜兴基地作为母基地的产能与工艺积累不可替代。对宜兴而言，中环（硅片）＋雅克（前驱体）同时进入长鑫供应链，标志宜兴半导体材料集群已从单点突破迈向链式配套，产业韧性和话语权同步提升。",
+ city:"宜兴",src:"观察者网",url:"https://www.guancha.cn/economy/2026_07_27_825241.shtml"},
+{co:"帝科股份",ind:"新能源",tier:"tier2",type:"业绩增长/去银化",date:"07-29",
+ title:"帝科股份Q1营收65.67亿增61.9%，机构上调全年预期，光伏去银化红利持续兑现",
+ summary:"帝科股份2026年一季度实现营收65.67亿元、同比增长61.9%，扣非净利润1.97亿元、同比大增205.26%。多家机构预测公司全年营收有望达171亿-180亿元。作为全球TOP3光伏银浆供应商，其高铜浆料（银含量约20%）在光伏去银化趋势中持续放量，30亿定增扩产年产2000吨贱金属少银浆料项目推进中。半年报定于8月29日披露。",
+ rel:"帝科股份的高增长印证光伏去银化是一条确定性赛道。银价高企下，用铜替代80%的银可将单瓦浆料成本降低40%以上，这是电池片降本的刚需方向，帝科的先发技术优势正转化为市占率和业绩。对宜兴而言，帝科是本地光伏材料的全球标杆，与中环领先的硅片、宜锂科技的电池材料共同构成宜兴新能源材料矩阵。机构普遍上调全年预期，说明市场认可其技术兑现能力——宜兴在全球光伏产业链的技术迭代中占据了一个关键的高附加值节点。",
+ city:"宜兴",src:"证券时报",url:"http://stock.stockstar.com/RB2026072900008349.shtml"}
+];
+
+// ===== TAB 3: 重点赛道 (FULL DETAIL) =====
+const DATA_TRACK=[
+{co:"利通电子",track:"AI算力",ind:"高端装备",type:"风险提示/加码算力",date:"07-30",
+ title:"利通电子高位回调三日跌超20%发风险提示，新增50亿授信加码算力、担保额度达120亿",
+ summary:"利通电子7月30日公告，股票7月28-30日连续三日收盘价跌幅偏离值累计达20%，属异常波动。公司称经营基本面平稳、算力运营与供应链稳定可保障交付，但提示算力业务客户集中、供应链波动、行业竞争加剧、下游需求不确定等风险，且拓展需持续大额投入致短期资产负债率偏高。7月1日公司在原100亿综合授信基础上新增不超50亿授信、新增不超40亿担保，2026年为子公司担保总额度预计不超120亿元，全力加码算力。",
+ rel:"利通电子的高位回调为AI算力这条最热赛道提供了一次冷静的风险提示。此前公司凭上半年净利预增11倍成为算力明星股，股价大涨后回调、公司主动揭示客户集中和高负债风险，反而体现了信息披露的负责任。对宜兴而言，利通从精密金属结构件跨界算力租赁是本地制造业拥抱新经济的标杆案例，但120亿担保额度背后的高杠杆扩张也需警惕——算力是重资本、强周期赛道，需求节奏和芯片供应的任何波动都会放大业绩弹性。宜兴在为这类二次创业企业喝彩的同时，也应关注其财务稳健性。",
+ city:"宜兴",src:"东方财富",url:"https://finance.eastmoney.com/a/202607303826763815.html"},
+{co:"银轮股份",track:"AI算力液冷",ind:"高端装备",type:"送样/订单",date:"07-26",
+ title:"银轮股份数据中心液冷零部件送样验证获小批订单，开山银轮拿下108套BTB算力液冷系统",
+ summary:"银轮股份7月25-26日披露，已定位为数据中心液冷模组零部件供应商，以不锈钢板式换热器等切入，产品已为多家模组客户送样验证、部分客户下达小批订单。5月控股子公司开山银轮与某数据中心整体解决方案商签约，供应108套BTB算力中心液冷散热系统；为数据中心大马力发电机组配套的大型冷却模块已量产。业内视2026为服务器液冷产业化应用关键之年。",
+ rel:"银轮股份切入数据中心液冷，为宜兴热管理产业接入了AI算力这一超级增长极。AI服务器功率密度飙升使液冷从可选变为刚需，2026年被视为液冷产业化元年，银轮凭借在汽车热管理领域积累的换热技术顺势卡位。对宜兴而言，银轮宜兴基地是本地高端装备的重要一环，其液冷业务与利通电子的算力租赁、远东股份的AIDC光纤形成算力—散热—连接的本地AI基建配套雏形。从送样验证到小批订单再到108套系统落地，说明这条赛道正从概念走向订单兑现。",
+ city:"宜兴",src:"证券时报",url:"https://www.stcn.com/article/detail/4041494.html"},
+{co:"亨鑫科技",track:"新能源光热",ind:"电线电缆",type:"中标",date:"07-21",
+ title:"亨鑫科技子公司中标2026青海太阳能热发电项目——通信线缆企业延伸新能源工程",
+ summary:"港股上市的宜兴通信线缆企业亨鑫科技（01082.HK）7月21日公告，子公司在2026年青海太阳能热发电项目中成功中标。亨鑫主营射频电缆、通信线缆，此次切入光热发电（太阳能热发电）项目，是从通信基础设施向新能源工程领域的延伸。青海是国内光热发电示范基地集中地，光热因可配置储热、出力稳定，被视为新型电力系统的重要调峰电源。",
+ rel:"亨鑫科技中标青海光热项目，展示了宜兴线缆企业向新能源工程跨界的又一路径。与远东（AIDC光纤）、中超（航空航天）的转型方向不同，亨鑫选择依托通信线缆的工程能力切入光热发电这一细分新能源赛道。对宜兴而言，这再次印证本地线缆产业集群并未固守传统市场，而是各自寻找差异化的高景气出口——有的向AI基建，有的向航空航天，有的向新能源工程。这种一业多元、各展所长的转型生态，正是宜兴传统优势产业保持增长动能的底层逻辑。",
+ city:"宜兴",src:"路透",url:"https://www.tradingview.com/news/reuters.com,2026:newsml_FWN43N15U:0-hengxin-technology-says-subsidiary-wins-bid-for-2026-solar-thermal-projects-in-qinghai/"},
+{co:"中国稀土控股",track:"稀土新材料",ind:"集成电路",type:"行业景气",date:"07-29",
+ title:"稀土价格高位运行，氧化镨钕同比涨71.7%；中国稀土控股仍停牌、推进复牌",
+ summary:"2026年稀土价格持续高企，中国稀土行业协会稀土价格指数7月末维持在268-270高位，主要轻稀土产品氧化镨钕均价约73.99万元/吨、较2025年上半年同期上涨71.7%，主因供给端开采冶炼指标增速放缓（首批同比仅增5.2%）叠加新能源车、机器人需求快增（上半年新能源车产量超700万辆、工业机器人产量同比增47.8%）。宜兴关联的中国稀土控股（00769.HK）自2025年6月18日起停牌，7月9日迁址并披露复牌进展季度更新。",
+ rel:"稀土价格的强势为宜兴新材料产业提供了有利的行业背景。稀土是新能源汽车驱动电机、人形机器人关节、风电等的战略性原材料，价格上涨反映下游高端制造需求旺盛。对宜兴而言，虽然中国稀土控股目前仍处停牌整改期、短期不具投资参考性，但稀土作为工业维生素的战略地位持续凸显，与宜兴的新能源（远东电池、宜锂）、高端装备（灵鸽、远航精密）产业存在上下游联动。行业景气与个别企业的合规整改需分开看待，产业机会仍在。",
+ city:"宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-29/doc-iniknmic0030571.shtml"}
+];
+
+// ===== HISTORY (精简归档) =====
+const HISTORY=[
+{cdate:"2026-07-31",co:"远东股份",ind:"电线电缆",t1:"股价涨停",title:"7/31涨停、2025扭亏为盈，处置电池资产优化运营",rel:"龙头经营质量修复",src:"中国证券报",url:"https://paper.cnstock.com/html/2026-07/31/content_2250286.htm"},
+{cdate:"2026-07-31",co:"利通电子",ind:"高端装备",t1:"风险提示",title:"高位三日跌超20%发异动，新增50亿授信加码算力",rel:"AI算力赛道风险提示",src:"东方财富",url:"https://finance.eastmoney.com/a/202607303826763815.html"},
+{cdate:"2026-07-31",co:"银轮股份",ind:"高端装备",t1:"订单",title:"数据中心液冷送样获小批订单，开山银轮拿108套BTB液冷系统",rel:"热管理接入AI算力",src:"证券时报",url:"https://www.stcn.com/article/detail/4041494.html"},
+{cdate:"2026-07-31",co:"雅克科技",ind:"集成电路",t1:"供应链",title:"长鑫科创板上市，雅克为核心前驱体供应商",rel:"深度绑定国产存储扩产",src:"新华网",url:"http://js.news.cn/20260730/d746a2ee93464a34be81ff06fb7cf5da/c.html"},
+{cdate:"2026-07-31",co:"中环领先",ind:"集成电路",t1:"供应链",title:"配套长鑫DRAM硅片，深圳新建12英寸项目",rel:"半导体硅片链式配套",src:"观察者网",url:"https://www.guancha.cn/economy/2026_07_27_825241.shtml"},
+{cdate:"2026-07-31",co:"帝科股份",ind:"新能源",t1:"业绩增长",title:"Q1营收65.67亿增61.9%，机构上调全年预期",rel:"光伏去银化红利兑现",src:"证券时报",url:"http://stock.stockstar.com/RB2026072900008349.shtml"},
+{cdate:"2026-07-31",co:"恒兴新材",ind:"新材料",t1:"业绩预增",title:"半年净利预增44%-72%，精细化工复苏",rel:"传统主业稳健+高端转型",src:"紫金财经",url:"https://finance.sina.com.cn/stock/bxjj/2026-07-13/doc-inihrxce9035945.shtml"},
+{cdate:"2026-07-31",co:"卓易信息",ind:"通用人工智能",t1:"股份回购",title:"回购落地首笔1399万，获中行3600万专项贷款",rel:"算力底座企业价值维护",src:"财中社",url:"https://m.jrj.com.cn/madapter/finance/2026/07/23170457882284.shtml"},
+{cdate:"2026-07-31",co:"中超控股",ind:"电线电缆",t1:"项目建设",title:"航空航天高温合金项目进入建设阶段",rel:"电缆龙头高端转型落地",src:"证券时报",url:"https://stock.stockstar.com/RB2026072700032798.shtml"},
+{cdate:"2026-07-31",co:"中晟高科",ind:"节能环保",t1:"业绩预警",title:"半年预亏1000-1300万，宜兴60MW/120MWh储能电站推进",rel:"环保企业储能转型阵痛",src:"东方财富",url:"https://finance.eastmoney.com/a/202607273822294540.html"},
+{cdate:"2026-07-31",co:"博睿新能",ind:"新能源",t1:"项目封顶",title:"宜兴储能项目厂房封顶，年内投产2GW物理储能产能",rel:"储能技术路线多元化",src:"新华网",url:"http://js.news.cn/20260730/d746a2ee93464a34be81ff06fb7cf5da/c.html"},
+{cdate:"2026-07-31",co:"亨鑫科技",ind:"电线电缆",t1:"中标",title:"子公司中标2026青海太阳能热发电项目",rel:"线缆企业延伸新能源工程",src:"路透",url:"https://www.tradingview.com/news/reuters.com,2026:newsml_FWN43N15U:0-hengxin-technology-says-subsidiary-wins-bid-for-2026-solar-thermal-projects-in-qinghai/"},
+{cdate:"2026-07-31",co:"中国稀土控股",ind:"集成电路",t1:"行业景气",title:"稀土价格高位，氧化镨钕同比涨71.7%（公司停牌中）",rel:"新材料战略地位凸显",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-29/doc-iniknmic0030571.shtml"},
+{cdate:"2026-07-31",co:"立霸股份",ind:"高端装备",t1:"股价异动",title:"连续异动跌超20%，澄清主营正常",rel:"传统制造估值需实质赛道支撑",src:"东方财富",url:"https://wap.eastmoney.com/a/202607223817340238.html"},
+{cdate:"2026-07-30",co:"宜锂科技",ind:"新能源",t1:"融资/扩产",title:"完成A轮融资，11.2亿建年产5200吨固态正极材料线",rel:"填补宜兴固态电池正极材料空白",src:"TrendForce",url:"https://www.trendforce.cn/industry-news/green-energy/20260728-6795.html"},
+{cdate:"2026-07-30",co:"恒翼生物",ind:"生命健康",t1:"基地竣工",title:"宜兴生产基地竣工，1.35亿美元买断PDE4抑制剂全球权益",rel:"宜兴创新药制造突破",src:"新华网",url:"http://www.js.xinhuanet.com/20260727/a1db2fce31eb4830a2542746c454b207/c.html"},
+{cdate:"2026-07-30",co:"远东电池",ind:"新能源",t1:"海外拓展",title:"北美5MWh光储项目落地，钠电前瞻布局",rel:"储能产业集群国际化",src:"远东电池官网",url:"https://www.febbattery.com/cn/news/259.html"},
+{cdate:"2026-07-30",co:"中辰股份",ind:"电线电缆",t1:"中标",title:"7月中标新能源电缆约2.4亿元",rel:"电缆企业转型新能源",src:"证券时报",url:"https://www.stcn.com/article/detail/4037549.html"},
+{cdate:"2026-07-30",co:"远程股份",ind:"电线电缆",t1:"业绩预警",title:"上半年预亏6000-9000万",rel:"铜价高企侵蚀利润",src:"中国证券报",url:"https://paper.cnstock.com/html/2026-07/15/content_2244447.htm"},
+{cdate:"2026-07-30",co:"卓易信息",ind:"通用人工智能",t1:"股份回购",title:"拟2000-4000万回购股份",rel:"固件领域独特定位",src:"证券时报",url:"https://www.stcn.com/article/detail/4035717.html"},
+{cdate:"2026-07-30",co:"远东股份",ind:"电线电缆",t1:"定增受理",title:"20亿定增受理，募投AIDC光纤预制棒",rel:"从电缆切入AI算力基建",src:"证券时报",url:"https://finance.eastmoney.com/a/202607273822154872.html"},
+{cdate:"2026-07-30",co:"中超控股",ind:"电线电缆",t1:"定增获批",title:"定增获批，中标国网16.45亿",rel:"转型航空航天零部件",src:"证券时报",url:"https://stock.stockstar.com/RB2026072700032798.shtml"},
+{cdate:"2026-07-30",co:"鹏鹞环保",ind:"节能环保",t1:"中标",title:"业务承订额超7.8亿",rel:"环保产业全国竞争力",src:"东方财富",url:"https://finance.eastmoney.com/a/202605203743216739.html"},
+{cdate:"2026-07-30",co:"中晟高科",ind:"节能环保",t1:"增持",title:"控股股东拟增持不低于3000万",rel:"转型环保+储能+新材料",src:"每日经济新闻",url:"https://www.nbd.com.cn/articles/2026-07-28/4524354.html"},
+{cdate:"2026-07-30",co:"雅克科技",ind:"集成电路",t1:"HBM龙头",title:"HBM前驱体稳定供应，股价涨停",rel:"全球半导体材料龙头",src:"证券时报",url:"https://www.stcn.com/article/detail/4045597.html"},
+{cdate:"2026-07-30",co:"中环领先",ind:"集成电路",t1:"产能扩张",title:"12英寸硅片远期月产140万片",rel:"半导体硅片国家队扩产",src:"观察者网",url:"https://www.guancha.cn/economy/2026_07_27_825241.shtml"},
+{cdate:"2026-07-30",co:"帝科股份",ind:"新能源",t1:"技术突破",title:"高铜浆料GW级量产，定增30亿扩产",rel:"引领光伏去银化",src:"东方财富",url:"https://finance.eastmoney.com/a/202607213815617734.html"},
+{cdate:"2026-07-30",co:"恒兴新材",ind:"新材料",t1:"投资扩产",title:"投资6亿启动两大新材料项目",rel:"向湿电子化学品延伸",src:"证券时报",url:"https://www.stcn.com/article/detail/4047540.html"},
+{cdate:"2026-07-30",co:"英矽智能",ind:"生命健康",t1:"重大合作",title:"与SK Biopharma 25亿美元合作",rel:"AI制药第一股落户宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/roll/2026-07-27/doc-inikfxaz3079350.shtml"},
+{cdate:"2026-07-30",co:"利通电子",ind:"高端装备",t1:"业绩爆发",title:"上半年净利预增1173%-1368%",rel:"算力租赁业务爆发",src:"同花顺",url:"https://m.10jqka.com.cn/20260714/c678162475.shtml"},
+{cdate:"2026-07-30",co:"灵鸽科技",ind:"通用人工智能",t1:"业绩增长",title:"Q1营收增161%，承接固态电解质中试线",rel:"切入固态电池装备",src:"东方财富",url:"https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html"},
+{cdate:"2026-07-30",co:"远航精密",ind:"高端装备",t1:"战略投资",title:"镍带项目推进，战略投资宜锂科技",rel:"镍基材料垂直一体化",src:"东方财富",url:"https://finance.eastmoney.com/a/202603093666298837.html"}
+];
+
+var allData=DATA_LOCAL.concat(DATA_CHAIN).concat(DATA_TRACK);
+var MODE='day',CUR_VIEW='local';
+// 重点赛道分组配色（撞色，一眼分区）
+var TRACK_COLORS=['#2563EB','#0E5E4E','#C8622D','#7C3AED','#0891B2','#B7791F','#DB2777','#059669','#DC2626','#4F46E5'];
+
+const listEl=document.getElementById("list");
+const cntEl=document.getElementById("cnt");
+const chipN=document.getElementById("chipN");
+const qEl=document.getElementById("q");
+const fInd=document.getElementById("fInd");
+const fType=document.getElementById("fType");
+const fCity=document.getElementById("fCity");
+const fCo=document.getElementById("fCo");
+
+chipN.textContent=allData.length;
+
+// Populate filters from all data + history
+var allForFilter=allData.concat(HISTORY);
+[...new Set(allForFilter.map(function(d){return d.ind}))].forEach(function(v){fInd.add(new Option(v,v))});
+[...new Set(allForFilter.map(function(d){return d.t1||d.type}))].forEach(function(v){fType.add(new Option(v,v))});
+[...new Set(allForFilter.map(function(d){return d.city||"宜兴"}))].forEach(function(v){fCity.add(new Option(v,v))});
+[...new Set(allForFilter.map(function(d){return d.co}))].forEach(function(v){fCo.add(new Option(v,v))});
+
+function switchMode(m){
+  MODE=m;
+  document.getElementById('tabDay').classList.toggle('on',m==='day');
+  document.getElementById('tabHist').classList.toggle('on',m==='hist');
+  document.getElementById('dayView').style.display=m==='day'?'block':'none';
+  document.getElementById('histView').style.display=m==='hist'?'block':'none';
+  if(m==='hist'){renderHist();}
+  else{renderDay();}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function switchView(v){
+  document.querySelectorAll('.view-tab').forEach(function(t){t.classList.toggle('on',t.dataset.v===v)});
+  CUR_VIEW=v;
+  renderDay();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function cardHTML(d,showTrack){
+  return '<div class="card">'+
+    '<div class="co-name">'+d.co+'</div>'+
+    '<div class="top">'+
+      '<span class="badge ind">'+(showTrack&&d.track?d.track:d.ind)+'</span>'+
+      '<span class="badge type">'+d.type+'</span>'+
+      '<span class="badge city">'+d.city+'</span>'+
+      '<span class="badge date">'+d.date+'</span>'+
+    '</div>'+
+    '<div class="gist">'+d.title+'</div>'+
+    '<div class="body-text">'+d.summary+'</div>'+
+    '<div class="rel"><div class="lab">🔺 对宜启示</div><p>'+d.rel+'</p></div>'+
+    '<div class="foot"><a class="srclink" href="'+d.url+'" target="_blank" rel="noopener">来源：'+d.src+'</a></div>'+
+  '</div>';
+}
+
+function renderDay(){
+  var htmlstr='';
+  if(CUR_VIEW==='local'){
+    var data=DATA_LOCAL;
+    cntEl.textContent=data.length;
+    htmlstr='<div class="grp tier2"><span>📍 本地重点企业动态</span><span class="gn">'+data.length+' 条</span></div>';
+    htmlstr+=data.map(function(d){return cardHTML(d,false)}).join('');
+  } else if(CUR_VIEW==='chain'){
+    var data=DATA_CHAIN;
+    cntEl.textContent=data.length;
+    var tiers=[
+      {k:'tier1',n:'🏛️ 传统优势支柱',d:'电线电缆 · 节能环保'},
+      {k:'tier2',n:'🚀 战略新兴主导',d:'集成电路 · 新能源 · 生命健康 · 新材料'},
+      {k:'tier3',n:'🌱 未来培育',d:'通用人工智能 · 高端装备'}
+    ];
+    tiers.forEach(function(tl){
+      var tr=data.filter(function(d){return d.tier===tl.k});
+      if(tr.length){
+        htmlstr+='<div class="grp '+tl.k+'"><span>'+tl.n+'</span><span class="gn">'+tl.d+' · '+tr.length+' 条</span></div>';
+        htmlstr+=tr.map(function(d){return cardHTML(d,false)}).join('');
+      }
+    });
+  } else if(CUR_VIEW==='track'){
+    var data=DATA_TRACK;
+    cntEl.textContent=data.length;
+    var tracks=[];
+    data.forEach(function(d){if(tracks.indexOf(d.track)<0)tracks.push(d.track)});
+    tracks.forEach(function(tk,i){
+      var tr=data.filter(function(d){return d.track===tk});
+      var col=TRACK_COLORS[i%TRACK_COLORS.length];
+      htmlstr+='<div class="grp track" style="background:'+col+';border-left-color:rgba(0,0,0,.22)"><span>🎯 '+tk+'</span><span class="gn">'+tr.length+' 条</span></div>';
+      htmlstr+=tr.map(function(d){return cardHTML(d,true)}).join('');
+    });
+  }
+  listEl.innerHTML=htmlstr||'<div class="empty">暂无动态</div>';
+}
+
+function renderHist(){
+  var q=qEl?qEl.value.trim().toLowerCase():'';
+  var i=fInd?fInd.value:'',t=fType?fType.value:'',c=fCity?fCity.value:'',co=fCo?fCo.value:'';
+  var rows=HISTORY.filter(function(d){
+    return(!i||d.ind===i)&&(!t||(d.t1||d.type)===t)&&(!c||(d.city||'宜兴')===c)&&(!co||d.co===co)&&(!q||(d.co+d.title+d.rel).toLowerCase().includes(q));
+  });
+  document.getElementById('histCnt').textContent=rows.length;
+  var htmlstr='';
+  // Group by date
+  var dates=[];
+  rows.forEach(function(d){if(dates.indexOf(d.cdate)<0)dates.push(d.cdate)});
+  dates.forEach(function(dt){
+    var dr=rows.filter(function(d){return d.cdate===dt});
+    htmlstr+='<div class="grp hist"><span>📋 '+dt+'</span><span class="gn">'+dr.length+' 条</span></div>';
+    htmlstr+=dr.map(function(d){
+      return '<div class="hist-card">'+
+        '<div class="hc-co">'+d.co+' <span style="font-size:11px;color:var(--sub);font-weight:400">'+d.ind+' · '+(d.t1||d.type)+'</span></div>'+
+        '<div class="hc-title">'+d.title+'</div>'+
+        '<div class="hc-rel">💡 '+d.rel+'</div>'+
+        '<div class="hc-meta"><a href="'+d.url+'" target="_blank" style="color:var(--brand2)">来源：'+d.src+'</a></div>'+
+      '</div>';
+    }).join('');
+  });
+  document.getElementById('histList').innerHTML=htmlstr||'<div class="empty">没有匹配的历史动态</div>';
+}
+
+function render(){renderDay();}
+
+// Search handlers
+if(qEl)qEl.addEventListener('input',function(){if(MODE==='hist')renderHist()});
+if(fInd)fInd.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+if(fType)fType.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+if(fCity)fCity.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+if(fCo)fCo.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+
+function reset(){
+  if(qEl)qEl.value='';
+  if(fInd)fInd.value='';
+  if(fType)fType.value='';
+  if(fCity)fCity.value='';
+  if(fCo)fCo.value='';
+  if(MODE==='hist')renderHist(); else renderDay();
+}
+
+function exportXLSX(){
+  var data=MODE==='hist'?HISTORY:allData;
+  var ws=XLSX.utils.json_to_sheet(data.map(function(d){
+    return{日期:d.cdate||'2026-07-30',企业:d.co,产业:d.ind,分类:d.t1||d.type,标题:d.title,启示:d.rel,来源:d.src,链接:d.url};
+  }));
+  var wb=XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb,ws,'宜兴企业动态');
+  XLSX.writeFile(wb,'宜兴企业动态_'+(MODE==='hist'?'历史':'当日')+'_20260730.xlsx');
+}
+
+render();
+
+</script>
+</body>
+</html>

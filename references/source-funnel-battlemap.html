@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>宜兴产业情报 · 信源漏斗作战图</title>
+<meta property="og:title" content="宜兴产业情报 · 信源漏斗作战图"/>
+<meta property="og:description" content="四级可信度分层 · 消息来源 · 网址 · 看什么 · 重点内容 —— 每条动态必标可追溯来源"/>
+<style>
+:root{
+  --bg-deep:#001133;
+  --bg-mid:#0a1f4d;
+  --bg-card:rgba(10,35,80,0.65);
+  --bg-card-hi:rgba(15,45,100,0.8);
+  --border-glow:#00d4ff;
+  --border-dim:rgba(0,212,255,0.25);
+  --cyan:#00d4ff;
+  --cyan-bright:#5ceaff;
+  --blue:#2b6b86;
+  --blue-lt:#4d94b0;
+  --green:#00ff9d;
+  --green-dim:#0fa960;
+  --orange:#ff8c42;
+  --orange-dim:#cc5c1a;
+  --gold:#ffd700;
+  --gold-dim:#b7791f;
+  --red:#ff4757;
+  --purple:#a78bfa;
+  --purple-dim:#6a4c93;
+  --text-main:#e0f0ff;
+  --text-sub:#7aa8d0;
+  --text-dim:#4a7a9a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  background:var(--bg-deep);
+  color:var(--text-main);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(rgba(0,80,160,0.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,80,160,0.08) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.wrap{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 0 30px}
+
+/* ===== HEADER ===== */
+.header{
+  position:relative;
+  background:linear-gradient(180deg,#001540 0%,#002a6a 100%);
+  border-bottom:2px solid var(--cyan);
+  padding:22px 30px 18px;
+  display:flex;align-items:center;justify-content:space-between;
+  overflow:hidden;
+}
+.header::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+  animation:scan 3s linear infinite;
+}
+@keyframes scan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.hd-left{display:flex;align-items:center;gap:14px}
+.hd-logo{width:42px;height:42px;flex-shrink:0}
+.hd-logo svg{width:100%;height:100%;filter:drop-shadow(0 0 6px rgba(0,212,255,.5))}
+.header .sub-en{font-size:12px;color:var(--text-dim);letter-spacing:5px;font-weight:600;margin-bottom:4px}
+.header h1{
+  font-size:28px;font-weight:800;
+  background:linear-gradient(135deg,#fff 0%,var(--cyan-bright) 50%,var(--cyan) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:3px;
+}
+.header .clock{font-size:14px;color:var(--cyan-bright);font-family:"Courier New",monospace;font-weight:700;text-align:right}
+.header .clock .date{font-size:11px;color:var(--text-sub);margin-top:3px}
+
+/* ===== KPI ROW ===== */
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;padding:18px 24px 6px}
+.kpi{background:var(--bg-card);border:1px solid var(--border-dim);border-radius:8px;padding:14px 16px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%}
+.kpi.k1::before{background:var(--cyan)}
+.kpi.k2::before{background:var(--green)}
+.kpi.k3::before{background:var(--gold)}
+.kpi.k4::before{background:var(--orange)}
+.kpi.k5::before{background:var(--purple)}
+.kpi .label{font-size:11px;color:var(--text-sub);letter-spacing:2px;font-weight:600}
+.kpi .value{font-size:28px;font-weight:800;margin-top:6px;font-family:"Courier New",monospace}
+.kpi.k1 .value{color:var(--cyan-bright)}
+.kpi.k2 .value{color:var(--green)}
+.kpi.k3 .value{color:var(--gold)}
+.kpi.k4 .value{color:var(--orange)}
+.kpi.k5 .value{color:var(--purple)}
+.kpi .unit{font-size:12px;color:var(--text-dim);margin-left:4px;font-weight:400}
+
+/* ===== PANEL ===== */
+.sec{padding:8px 24px 0}
+.panel{background:var(--bg-card);border:1px solid var(--border-dim);border-radius:10px;overflow:hidden;position:relative;margin-bottom:16px}
+.panel::before,.panel::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--cyan);pointer-events:none;z-index:2}
+.panel::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.panel::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.panel-hd{background:linear-gradient(90deg,rgba(0,100,200,0.3),transparent);border-bottom:1px solid var(--border-dim);padding:11px 16px;font-size:15px;font-weight:700;color:var(--cyan-bright);display:flex;align-items:center;gap:9px;letter-spacing:1px}
+.panel-hd .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.panel-hd .hint{margin-left:auto;font-size:11px;color:var(--text-dim);font-weight:400;letter-spacing:0}
+.panel-bd{padding:16px}
+
+/* ===== FUNNEL (4 tiers) ===== */
+.funnel{display:flex;flex-direction:column;align-items:center;gap:7px}
+.fl{color:#fff;border-radius:8px;padding:13px 18px;font-size:15px;font-weight:700;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.25);position:relative;letter-spacing:.5px}
+.fl small{font-size:11.5px;opacity:.9;display:block;margin-top:3px;font-weight:400;letter-spacing:0}
+.fl .badge{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:2px 9px;font-weight:700}
+.fl1{width:100%;background:linear-gradient(90deg,#001540,#0066cc)}
+.fl2{width:85%;background:linear-gradient(90deg,#003380,#00a0d4)}
+.fl3{width:70%;background:linear-gradient(90deg,#0066cc,var(--cyan));color:#001a33}
+.fl4{width:55%;background:linear-gradient(90deg,var(--cyan),var(--green));color:#001a1a}
+.funnel-note{text-align:center;font-size:11.5px;color:var(--text-dim);margin-top:12px;letter-spacing:1px}
+
+/* ===== SOURCE TABLE ===== */
+.src-search{width:100%;background:rgba(0,50,120,0.5);border:1px solid var(--border-dim);border-radius:8px;padding:12px 16px;color:var(--text-main);font-size:14px;outline:none;margin-bottom:16px}
+.src-search::placeholder{color:var(--text-dim)}
+.src-search:focus{border-color:var(--cyan);box-shadow:0 0 12px rgba(0,212,255,0.15)}
+
+.tier{margin-bottom:18px}
+.tier-hd{display:flex;align-items:center;gap:10px;padding:9px 13px;border-radius:8px 8px 0 0;font-size:14.5px;font-weight:700;letter-spacing:1px}
+.tier-hd .tno{font-family:"Courier New",monospace;font-size:12px;background:rgba(0,0,0,.25);border-radius:5px;padding:2px 8px}
+.tier-hd .cred{margin-left:auto;font-size:11px;font-weight:600;opacity:.9}
+.t1 .tier-hd{background:linear-gradient(90deg,rgba(0,102,204,.5),rgba(0,102,204,.12));color:#8fd4ff;border:1px solid rgba(0,150,255,.35)}
+.t2 .tier-hd{background:linear-gradient(90deg,rgba(0,212,255,.35),rgba(0,212,255,.08));color:var(--cyan-bright);border:1px solid rgba(0,212,255,.3)}
+.t3 .tier-hd{background:linear-gradient(90deg,rgba(0,255,157,.28),rgba(0,255,157,.06));color:var(--green);border:1px solid rgba(0,255,157,.3)}
+.t4 .tier-hd{background:linear-gradient(90deg,rgba(255,140,66,.28),rgba(255,140,66,.06));color:var(--orange);border:1px solid rgba(255,140,66,.3)}
+
+table.src{width:100%;border-collapse:collapse;font-size:13px;background:rgba(4,20,50,.4);border:1px solid var(--border-dim);border-top:none;border-radius:0 0 8px 8px;overflow:hidden}
+table.src th{background:rgba(0,100,200,0.22);color:var(--cyan-bright);font-weight:700;font-size:11.5px;padding:9px 12px;text-align:left;border-bottom:1px solid var(--border-dim);letter-spacing:1px;white-space:nowrap}
+table.src td{padding:11px 12px;border-bottom:1px solid rgba(0,80,160,0.12);color:var(--text-main);vertical-align:top;line-height:1.55}
+table.src tr:last-child td{border-bottom:none}
+table.src tr:nth-child(even) td{background:rgba(0,50,120,0.12)}
+table.src tr:hover td{background:rgba(0,150,255,0.08)}
+.src-name{font-weight:700;color:#fff;white-space:nowrap}
+.src-name small{display:block;font-weight:400;color:var(--text-dim);font-size:10.5px;white-space:normal;margin-top:2px}
+table.src a{color:var(--cyan);text-decoration:none;border-bottom:1px dashed rgba(0,212,255,.4);word-break:break-all}
+table.src a:hover{color:var(--cyan-bright);border-bottom-color:var(--cyan-bright)}
+.watch{color:var(--text-main)}
+.watch b{color:var(--gold)}
+.wxlist{display:flex;flex-wrap:wrap;gap:5px}
+.wx{font-size:11px;background:rgba(0,80,160,.3);border:1px solid rgba(0,150,255,.2);border-left:2px solid var(--orange);border-radius:4px;padding:3px 8px;color:var(--text-main)}
+.pr{font-size:10.5px;font-family:"Courier New",monospace;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.pr.p1{background:rgba(0,102,204,.3);color:#8fd4ff;border:1px solid rgba(0,150,255,.4)}
+.pr.p2{background:rgba(0,255,157,.15);color:var(--green);border:1px solid rgba(0,255,157,.35)}
+.pr.p3{background:rgba(255,140,66,.15);color:var(--orange);border:1px solid rgba(255,140,66,.35)}
+
+.callout{background:rgba(255,140,66,0.09);border:1px solid rgba(255,140,66,.3);border-left:4px solid var(--orange);border-radius:8px;padding:13px 16px;font-size:12.5px;color:var(--text-main);line-height:1.7;margin-top:4px}
+.callout b{color:var(--orange)}
+.rule{background:rgba(0,212,255,0.07);border:1px solid var(--border-dim);border-left:4px solid var(--cyan);border-radius:8px;padding:13px 16px;font-size:12.5px;color:var(--text-main);line-height:1.75}
+.rule b{color:var(--cyan-bright)}
+.rule .step{display:inline-block;font-family:"Courier New",monospace;color:var(--green);font-weight:700;margin-right:4px}
+
+.footer{text-align:center;padding:22px;font-size:11px;color:var(--text-dim);letter-spacing:1px;line-height:1.7}
+.hidden{display:none}
+
+/* ===== 手机端 ===== */
+@media(max-width:768px){
+  .wrap{padding:0 0 16px}
+  .header{padding:14px 16px;flex-direction:column;align-items:flex-start;gap:8px}
+  .hd-left{gap:10px}
+  .hd-logo{width:34px;height:34px}
+  .header h1{font-size:17px;letter-spacing:1px}
+  .header .sub-en{font-size:8.5px;letter-spacing:2px;margin-bottom:2px}
+  .header .clock{font-size:12px;text-align:left}
+  .kpi-row{grid-template-columns:1fr 1fr;gap:8px;padding:12px 12px 4px}
+  .kpi{padding:10px 12px}
+  .kpi .value{font-size:20px}
+  .kpi.k5 .value{font-size:15px}
+  .sec{padding:6px 12px 0}
+  .panel-bd{padding:12px}
+  .panel-hd{font-size:13px;padding:9px 12px}
+  .panel-hd .hint{display:none}
+  .fl{font-size:13px;padding:11px 12px 11px 12px}
+  .fl .badge{display:none}
+  .fl1,.fl2,.fl3,.fl4{width:100%}
+  /* 表格转卡片式 */
+  table.src,table.src tbody,table.src tr,table.src td{display:block;width:100%}
+  table.src thead{display:none}
+  table.src{border-radius:0 0 8px 8px}
+  table.src tr{border-bottom:1px solid rgba(0,150,255,.2);padding:4px 0}
+  table.src tr:nth-child(even) td{background:transparent}
+  table.src td{border:none;padding:5px 12px}
+  table.src td[data-l]::before{content:attr(data-l);display:block;font-size:10px;color:var(--cyan);letter-spacing:1px;font-weight:700;margin-bottom:2px}
+  .src-name{white-space:normal}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="hd-left">
+      <div class="hd-logo">
+        <svg viewBox="0 0 100 100" fill="none">
+          <g fill="#5ceaff">
+            <path d="M50 8 C54 20 60 26 72 30 C60 34 54 40 50 52 C46 40 40 34 28 30 C40 26 46 20 50 8Z"/>
+            <path d="M50 48 C54 60 60 66 72 70 C60 74 54 80 50 92 C46 80 40 74 28 70 C40 66 46 60 50 48Z" opacity=".55"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="sub-en">YIXING INTELLIGENCE · SOURCE FUNNEL</div>
+        <h1>宜兴产业情报 · 信源漏斗作战图</h1>
+      </div>
+    </div>
+    <div class="clock">
+      <div id="time">--:--:--</div>
+      <div class="date" id="date">----年--月--日</div>
+    </div>
+  </div>
+
+  <!-- KPI -->
+  <div class="kpi-row">
+    <div class="kpi k1"><div class="label">信源总数</div><div class="value">28<span class="unit">源</span></div></div>
+    <div class="kpi k2"><div class="label">官方权威</div><div class="value">9<span class="unit">源</span></div></div>
+    <div class="kpi k3"><div class="label">财经资本</div><div class="value">7<span class="unit">源</span></div></div>
+    <div class="kpi k4"><div class="label">产业垂直</div><div class="value">10+<span class="unit">源</span></div></div>
+    <div class="kpi k5"><div class="label">本地+公众号</div><div class="value" style="font-size:20px">15+<span class="unit">个</span></div></div>
+  </div>
+
+  <!-- FUNNEL -->
+  <div class="sec">
+    <div class="panel">
+      <div class="panel-hd"><span class="dot"></span>信源可信度漏斗 <span class="hint">按可信度分层取用 · 每条动态必标可追溯来源</span></div>
+      <div class="panel-bd">
+        <div class="funnel">
+          <div class="fl fl1"><span class="badge">L1</span>🏛️ 官方权威 <small>政府 / 交易所 / 海关 / 证监 —— 最可信，优先取用</small></div>
+          <div class="fl fl2"><span class="badge">L2</span>📈 主流财经 <small>巨潮 / 沪深交易所 / 证券时报 / 东财 / 同花顺</small></div>
+          <div class="fl fl3"><span class="badge">L3</span>🔬 产业垂直 <small>集微 / SMM / 动脉网 / 北极星 —— 按赛道深挖</small></div>
+          <div class="fl fl4"><span class="badge">L4</span>📰 本地+公众号 <small>一手动态 · 对宜启示素材 —— 需回链权威源核实</small></div>
+        </div>
+        <div class="funnel-note">越往上层级越权威 · 冲突时以高层级为准 · 低层级线索须回链高层级核实后方可入库</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOURCE TABLES -->
+  <div class="sec">
+    <div class="panel">
+      <div class="panel-hd"><span class="dot"></span>信源清单 · 消息来源 / 网址 / 看什么 <span class="hint">🔍 下方可搜索过滤</span></div>
+      <div class="panel-bd">
+        <input class="src-search" id="srcSearch" placeholder="🔍 输入信源、赛道或关键词过滤，如：巨潮 / 半导体 / 海关 / IPO…" autocomplete="off"/>
+        <div id="tierBox">
+
+          <!-- L1 -->
+          <div class="tier t1" data-k="官方 权威 政府 海关 证监 交易所 政策 招商 环评 项目 统计">
+            <div class="tier-hd"><span class="tno">L1</span>🏛️ 官方与权威披露<span class="cred">可信度 ★★★★★ · 优先</span></div>
+            <table class="src">
+              <thead><tr><th style="width:20%">消息来源</th><th style="width:26%">网址</th><th>看什么 · 重点内容</th><th style="width:9%">优先级</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">宜兴市人民政府<small>官网 + 政府信息公开</small></span></td>
+                  <td data-l="网址"><a href="http://www.yixing.gov.cn" target="_blank">yixing.gov.cn</a></td>
+                  <td data-l="看什么" class="watch"><b>重大项目</b>开工/签约通报、<b>招商引资</b>动态、季度经济运行统计、政策原文、领导调研走访动向</td>
+                  <td data-l="优先级"><span class="pr p1">P1</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">宜兴经开区 / 环科园<small>重大项目专栏 + 环评公示</small></span></td>
+                  <td data-l="网址"><a href="http://www.yixing.gov.cn/zgyx/zfxxgk/szfxxgkml/zdxm/index.shtml" target="_blank">重大项目专栏</a> · 环评受理公示</td>
+                  <td data-l="看什么" class="watch"><b>新项目最早线索</b>：环评受理＝项目落地前 3-6 个月信号；新建/扩产产能、投资额、外资背景</td>
+                  <td data-l="优先级"><span class="pr p1">P1</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">无锡市政府 / 江苏省发改委<small>市级 + 省级</small></span></td>
+                  <td data-l="网址"><a href="https://www.wuxi.gov.cn" target="_blank">wuxi.gov.cn</a> · <a href="https://fzggw.jiangsu.gov.cn" target="_blank">fzggw.jiangsu.gov.cn</a></td>
+                  <td data-l="看什么" class="watch"><b>锡宜一体化</b>政策、省/市重大项目清单、产业专项资金、产业基金设立</td>
+                  <td data-l="优先级"><span class="pr p1">P1</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">南京海关（宜兴属地）<small>+ 海关总署</small></span></td>
+                  <td data-l="网址"><a href="http://nanjing.customs.gov.cn" target="_blank">nanjing.customs.gov.cn</a> · <a href="http://www.customs.gov.cn" target="_blank">customs.gov.cn</a></td>
+                  <td data-l="看什么" class="watch"><b>外贸进出口</b>数据、AEO 高级认证、<b>出口管制/退税</b>政策、跨境合规提示</td>
+                  <td data-l="优先级"><span class="pr p2">P2</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">证监会 / 江苏证监局<small>辖区监管</small></span></td>
+                  <td data-l="网址"><a href="http://www.csrc.gov.cn" target="_blank">csrc.gov.cn</a></td>
+                  <td data-l="看什么" class="watch">宜兴企业 <b>IPO 辅导备案</b>、再融资核准、行政监管措施、辅导验收公示</td>
+                  <td data-l="优先级"><span class="pr p2">P2</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- L2 -->
+          <div class="tier t2" data-k="财经 资本 巨潮 上交所 深交所 公告 ipo 定增 并购 财报 东财 同花顺 证券时报 企查查 天眼查">
+            <div class="tier-hd"><span class="tno">L2</span>📈 财经与资本市场<span class="cred">可信度 ★★★★☆</span></div>
+            <table class="src">
+              <thead><tr><th style="width:20%">消息来源</th><th style="width:26%">网址</th><th>看什么 · 重点内容</th><th style="width:9%">优先级</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">巨潮资讯<small>法定披露 · 最权威</small></span></td>
+                  <td data-l="网址"><a href="http://www.cninfo.com.cn" target="_blank">cninfo.com.cn</a></td>
+                  <td data-l="看什么" class="watch"><b>上市公司公告原文</b>：定期报告、重大合同/中标、对外投资、股权变动、诉讼仲裁（远东股份等宜兴上市公司）</td>
+                  <td data-l="优先级"><span class="pr p1">P1</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">上交所 / 深交所<small>沪深两市</small></span></td>
+                  <td data-l="网址"><a href="http://www.sse.com.cn" target="_blank">sse.com.cn</a> · <a href="http://www.szse.cn" target="_blank">szse.cn</a></td>
+                  <td data-l="看什么" class="watch"><b>IPO 进程</b>、问询函/回复、再融资、监管函、停复牌</td>
+                  <td data-l="优先级"><span class="pr p2">P2</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">证券时报 / 东财 / 同花顺 / 新浪财经<small>财经解读</small></span></td>
+                  <td data-l="网址"><a href="https://www.stcn.com" target="_blank">stcn.com</a> · <a href="https://www.eastmoney.com" target="_blank">eastmoney.com</a> · <a href="https://www.10jqka.com.cn" target="_blank">10jqka.com.cn</a></td>
+                  <td data-l="看什么" class="watch">公告<b>解读</b>、行业快讯、行情异动、机构调研纪要、投资者互动问答</td>
+                  <td data-l="优先级"><span class="pr p3">P3</span></td>
+                </tr>
+                <tr>
+                  <td data-l="消息来源"><span class="src-name">企查查 / 天眼查<small>核实工具 · 不作新闻源</small></span></td>
+                  <td data-l="网址"><a href="https://www.qcc.com" target="_blank">qcc.com</a> · <a href="https://www.tianyancha.com" target="_blank">tianyancha.com</a></td>
+                  <td data-l="看什么" class="watch">核 <b>企业全称 / 注册地 / 股权穿透</b>、经营异常、司法风险、对外投资（仅用于交叉核实，不单独引用）</td>
+                  <td data-l="优先级"><span class="pr p2">核实</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- L3 -->
+          <div class="tier t3" data-k="产业 垂直 半导体 集微 硅片 光刻胶 封测 锂电 储能 光伏 smm 高工 生物医药 动脉网 创新药 器械 环保 北极星 航天 火箭 低空 泰伯">
+            <div class="tier-hd"><span class="tno">L3</span>🔬 产业垂直媒体（按赛道深挖）<span class="cred">可信度 ★★★★☆</span></div>
+            <table class="src">
+              <thead><tr><th style="width:20%">赛道</th><th style="width:26%">消息来源 · 网址</th><th>看什么 · 重点内容</th><th style="width:9%">优先级</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-l="赛道"><span class="src-name">💾 半导体</span></td>
+                  <td data-l="来源"><a href="https://www.ijiwei.com" target="_blank">集微网 ijiwei.com</a>、半导体行业观察、集邦 TrendForce</td>
+                  <td data-l="看什么" class="watch"><b>中环领先</b>大硅片扩产、<b>雅克</b>前驱体/光刻胶、新进半导体、中车 IGBT、先进封测产能、设备国产化</td>
+                  <td data-l="优先级"><span class="pr p2">P2</span></td>
+                </tr>
+                <tr>
+                  <td data-l="赛道"><span class="src-name">🔋 锂电/储能/光伏</span></td>
+                  <td data-l="来源"><a href="https://www.smm.cn" target="_blank">SMM smm.cn</a>、高工锂电、<a href="https://www.bjx.com.cn" target="_blank">北极星储能网</a></td>
+                  <td data-l="看什么" class="watch"><b>远东电池</b>储能订单、宜锂/天华新能正极、<b>固态电池</b>进展、TCL 中环光伏排产、材料价格</td>
+                  <td data-l="优先级"><span class="pr p2">P2</span></td>
+                </tr>
+                <tr>
+                  <td data-l="赛道"><span class="src-name">💊 生命健康</span></td>
+                  <td data-l="来源"><a href="https://www.vcbeat.top" target="_blank">动脉网 vcbeat.top</a>、医药魔方</td>
+                  <td data-l="看什么" class="watch"><b>恒翼生物</b>创新药临床、<b>英矽智能</b> AI 制药管线、医疗器械注册证获批、宜兴药谷招引</td>
+                  <td data-l="优先级"><span class="pr p3">P3</span></td>
+                </tr>
+                <tr>
+                  <td data-l="赛道"><span class="src-name">♻️ 节能环保</span></td>
+                  <td data-l="来源"><a href="https://www.bjx.com.cn" target="_blank">北极星环保网</a>、E20 环境平台</td>
+                  <td data-l="看什么" class="watch"><b>环保装备</b>中标、水处理/固废/大气项目、宜兴环科园企业出海、绿色技改</td>
+                  <td data-l="优先级"><span class="pr p3">P3</span></td>
+                </tr>
+                <tr>
+                  <td data-l="赛道"><span class="src-name">🚀 商业航天 · 低空</span></td>
+                  <td data-l="来源">泰伯网、低空经济观察</td>
+                  <td data-l="看什么" class="watch"><b>斯普瑞神坤</b>火箭、<b>天睿达</b>低空雷达、宜兴低空经济政策、算力/数据中心招引</td>
+                  <td data-l="优先级"><span class="pr p3">P3</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- L4 -->
+          <div class="tier t4" data-k="本地 媒体 公众号 宜兴发布 阳羡 宜城 zaker 新华 交汇点 荔枝 无锡发布 一手 现场">
+            <div class="tier-hd"><span class="tno">L4</span>📰 本地媒体 &amp; 微信公众号<span class="cred">可信度 ★★★☆☆ · 需回链核实</span></div>
+            <table class="src">
+              <thead><tr><th style="width:20%">类型</th><th style="width:26%">消息来源 · 网址</th><th>看什么 · 重点内容</th><th style="width:9%">优先级</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-l="类型"><span class="src-name">本地 / 省级媒体</span></td>
+                  <td data-l="来源"><a href="http://www.yichengnews.com" target="_blank">宜城news</a>、<a href="https://www.myzaker.com" target="_blank">ZAKER宜兴</a>、<a href="http://js.news.cn" target="_blank">新华网江苏</a>、<a href="https://www.xhby.net" target="_blank">交汇点</a>、<a href="https://www.jstv.com" target="_blank">荔枝新闻</a></td>
+                  <td data-l="看什么" class="watch"><b>一手动态</b>：签约/开工现场、政企活动、企业访谈；<b>对宜启示</b>素材的主要来源</td>
+                  <td data-l="优先级"><span class="pr p3">P3</span></td>
+                </tr>
+                <tr>
+                  <td data-l="类型"><span class="src-name">微信公众号<small>搜一搜关注</small></span></td>
+                  <td data-l="来源"><div class="wxlist"><span class="wx">宜兴发布</span><span class="wx">宜兴日报</span><span class="wx">阳羡视界</span><span class="wx">宜兴经开区</span><span class="wx">宜兴环科园</span><span class="wx">宜兴商务</span><span class="wx">宜兴招商</span><span class="wx">无锡发布</span><span class="wx">锡宜一体化</span><span class="wx">江苏发改</span></div></td>
+                  <td data-l="看什么" class="watch">政务快讯、<b>招商活动预告</b>、企业动态一手发布；速度最快，但须回链官网/新闻版本</td>
+                  <td data-l="优先级"><span class="pr p3">P3</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="callout">📱 <b>公众号采集说明：</b>微信公众号无固定可抓网址，需微信端「搜一搜」进入；引用时尽量回链到<b>同源官网 / 新闻网站版本</b>作为可追溯来源，纯公众号独家的注明「来源：XX公众号 + 日期」。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 研判铁律 -->
+  <div class="sec">
+    <div class="panel">
+      <div class="panel-hd"><span class="dot" style="background:var(--cyan);box-shadow:0 0 8px var(--cyan)"></span>取源与研判铁律</div>
+      <div class="panel-bd">
+        <div class="rule">
+          <span class="step">① 分层取用</span>同一事件优先取高层级信源；L4 线索必须回链 L1/L2 权威源核实后方可入库。<br/>
+          <span class="step">② 双源验证</span>涉及金额/产能/外资等关键数字，至少 2 个独立信源交叉一致，否则标注「待核实」。<br/>
+          <span class="step">③ 必标来源</span>每条动态末尾必须附<b>可点击来源链接 + 日期</b>，确保可追溯。<br/>
+          <span class="step">④ 企业核名</span>企业以<b>企查查/天眼查全称</b>为准，杜绝简称歧义（如「远东」需明确远东股份/远东电缆）。<br/>
+          <span class="step">⑤ 对宜落点</span>每条动态附一句<b>「对宜启示」</b>——这条信息对宜兴招商/产业/合规意味着什么。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    YIXING INTELLIGENCE · SOURCE FUNNEL &nbsp;|&nbsp; 信源体系依据《2025宜兴外商投资环境白皮书》与宜兴 3+3+N 产业集群编制<br/>
+    覆盖 28 源 × 四级可信度分层 · 每条动态必标可追溯来源 &nbsp;|&nbsp; WISELAW © 2026
+  </div>
+
+</div>
+
+<script>
+function updateClock(){
+  const now=new Date();
+  const pad=n=>String(n).padStart(2,'0');
+  document.getElementById('time').textContent=`${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+  document.getElementById('date').textContent=`${now.getFullYear()}年${pad(now.getMonth()+1)}月${pad(now.getDate())}日`;
+}
+updateClock();setInterval(updateClock,1000);
+
+// search filter (row + tier level)
+const search=document.getElementById('srcSearch');
+const tiers=document.querySelectorAll('#tierBox .tier');
+search.addEventListener('input',()=>{
+  const q=search.value.trim().toLowerCase();
+  tiers.forEach(tier=>{
+    const tierKey=(tier.dataset.k||'').toLowerCase();
+    let anyVisible=false;
+    tier.querySelectorAll('tbody tr').forEach(tr=>{
+      const txt=(tr.textContent+' '+tierKey).toLowerCase();
+      const show=!q||txt.includes(q);
+      tr.classList.toggle('hidden',!show);
+      if(show)anyVisible=true;
+    });
+    tier.classList.toggle('hidden',q&&!anyVisible);
+  });
+});
+</script>
+</body>
+</html>
