@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>宜兴市重点企业商业动态 · 每日参阅</title>
+<meta property="og:title" content="宜兴市重点企业商业动态 · 2026-08-01"/>
+<meta property="og:description" content="当日/昨日重点动态 + 对宜启示，每日更新"/>
+<style>
+:root{
+  --brand:#0E5E4E; --brand2:#12876E; --accent:#C8622D; --accent2:#E08A3C;
+  --bg:#f4f6f5; --card:#ffffff; --ink:#1c2b28; --sub:#5f6f6b; --line:#e6ebe9;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding-bottom:40px}
+.topbar{background:var(--brand);color:#fff;display:flex;align-items:center;gap:10px;padding:12px 16px}
+.topbar .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#19a884,#0E5E4E);display:flex;align-items:center;justify-content:center;font-size:18px}
+.topbar b{font-size:15px;letter-spacing:.5px}
+.topbar span{font-size:11px;opacity:.8;display:block;font-weight:400}
+.hero{background:linear-gradient(160deg,var(--brand) 0%,var(--brand2) 100%);color:#fff;padding:20px 18px 18px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%)}
+.hero h1{font-size:17px;font-weight:800;letter-spacing:.5px}
+.hero .sub{font-size:12.5px;opacity:.9;margin-top:3px;font-weight:500}
+.hero .date{display:inline-block;font-size:13px;font-weight:700;margin-top:5px;font-variant-numeric:tabular-nums;opacity:.95}
+.hero .meta{font-size:10.5px;opacity:.8;margin-top:4px}
+.hero .chip{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:2px 11px;font-size:11px;margin-top:6px;margin-left:8px}
+.tools{background:#fff;padding:12px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.search{width:100%;border:1px solid var(--line);background:#f7f9f8;border-radius:10px;padding:11px 14px;font-size:14px;outline:none}
+.search:focus{border-color:var(--brand2);background:#fff}
+.filters{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}
+.filters select{flex:1;min-width:120px;border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-size:13px;background:#fff;color:var(--ink)}
+.btns{display:flex;gap:8px;margin-top:9px}
+.btn{flex:1;border:none;border-radius:9px;padding:9px;font-size:13px;font-weight:600;cursor:pointer}
+.btn.reset{background:#eef2f1;color:var(--sub)}
+.btn.export{background:var(--accent);color:#fff}
+.countbar{padding:10px 16px 2px;font-size:12px;color:var(--sub)}
+.countbar b{color:var(--brand);font-size:14px}
+.list{padding:12px;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border-radius:14px;box-shadow:0 3px 14px rgba(20,50,45,.06);border:1px solid var(--line);padding:15px 16px 16px;position:relative}
+.card .top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.seq{background:var(--brand);color:#fff;font-size:12px;font-weight:700;min-width:24px;height:24px;padding:0 6px;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
+.badge.type{background:#fbeee3;color:var(--accent)}
+.badge.ind{background:#e7f2ee;color:var(--brand)}
+.badge.city{background:#eaf3f7;color:#2b6b86}
+.badge.date{background:#eef1f0;color:var(--sub);margin-left:auto}
+.card h3{font-size:16.5px;font-weight:700;line-height:1.45}
+.card .summary{font-size:13.5px;color:#46534f;margin-top:8px}
+.rel{margin-top:12px;background:#f0f7f4;border-left:3px solid var(--brand2);border-radius:0 8px 8px 0;padding:10px 12px}
+.rel .lab{font-size:11px;font-weight:700;color:var(--brand);letter-spacing:1px}
+.rel p{font-size:13px;color:#2f4a44;margin-top:3px}
+.foot{margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.srclink{font-size:12.5px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:2px}
+.srclink:active{opacity:.6}
+.cdate{font-size:11.5px;color:var(--sub)}
+.tabs{position:sticky;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -3px 14px rgba(0,0,0,.07)}
+.tab{flex:1;text-align:center;padding:12px;font-size:14px;font-weight:700;border-radius:11px;background:#eef2f1;color:var(--sub);cursor:pointer;border:1px solid var(--line)}
+.tab.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.hnote{font-size:11.5px;color:var(--sub);padding:10px 16px 0;line-height:1.6}
+.hide{display:none}
+.empty{text-align:center;color:var(--sub);padding:50px 20px;font-size:14px}
+.pgfoot{text-align:center;font-size:11px;color:#9aa8a4;padding:18px 20px;line-height:1.8}
+
+.view-tabs{display:flex;gap:0;background:#fff;border-bottom:2px solid var(--brand);position:sticky;top:0;z-index:30}
+.view-tab{flex:1;text-align:center;padding:14px 8px;font-size:14px;font-weight:700;color:var(--sub);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .2s}
+.view-tab.on{color:var(--brand);border-bottom-color:var(--brand);background:#eef5f2}
+.day-tabs{display:flex;gap:10px;padding:10px 14px;background:#fff;position:sticky;bottom:0;z-index:40;border-top:1px solid var(--line);box-shadow:0 -3px 14px rgba(0,0,0,.08)}
+.day-tab{flex:1;text-align:center;padding:13px;font-size:14px;font-weight:700;color:var(--sub);cursor:pointer;border:1px solid var(--line);background:#eef2f1;border-radius:11px}
+.day-tab.on{color:#fff;background:var(--brand);border-color:var(--brand)}
+.grp{margin:14px 0 6px;padding:10px 14px;border-radius:10px;font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px}
+.grp.tier1{background:linear-gradient(120deg,#B7791F,#D9A441);color:#fff;border-left:6px solid #7a5310}
+.grp.tier2{background:linear-gradient(120deg,#0E5E4E,#17A883);color:#fff;border-left:6px solid #073d32}
+.grp.tier3{background:linear-gradient(120deg,#C8622D,#E88B3D);color:#fff;border-left:6px solid #8f4315}
+.grp.track{background:#0E5E4E;color:#fff;border-left:6px solid rgba(0,0,0,.2)}
+.grp.hist{background:linear-gradient(120deg,#0E5E4E,#17A883);color:#fff;border-left:6px solid #073d32}
+.grp .gn{font-size:12px;color:inherit;opacity:.85;font-weight:500}
+.co-name{font-size:19px;font-weight:800;color:var(--brand);line-height:1.35;margin-bottom:6px;letter-spacing:0.5px}
+.gist{font-size:14.5px;font-weight:700;color:var(--ink);margin-top:8px;line-height:1.5;padding:7px 12px;background:#eef5f2;border-radius:8px}
+.body-text{font-size:13.5px;color:#46534f;margin-top:9px;line-height:1.65}
+.hist-card{background:var(--card);border-radius:10px;border:1px solid var(--line);padding:12px 14px;margin-bottom:8px}
+.hist-card .hc-co{font-size:15px;font-weight:700;color:var(--brand)}
+.hist-card .hc-title{font-size:13px;color:var(--ink);margin-top:4px}
+.hist-card .hc-meta{font-size:11px;color:var(--sub);margin-top:4px}
+.hist-card .hc-rel{font-size:12px;color:#46534f;margin-top:6px;padding:5px 8px;background:#f0f7f4;border-radius:6px}
+</style>
+</head>
+<body>
+<div id="pass-gate" style="position:fixed;inset:0;z-index:99999;background:radial-gradient(ellipse at 50% 32%,#12876E 0%,#0E5E4E 55%,#0a4438 100%);display:flex;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+  <div style="background:rgba(255,255,255,.97);border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.35);padding:42px 30px 34px;width:100%;max-width:400px;text-align:center">
+    <svg width="64" height="64" viewBox="0 0 100 100" style="margin:0 auto 22px;display:block" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="lp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19a884"/><stop offset="1" stop-color="#0E5E4E"/></linearGradient></defs>
+      <g fill="url(#lp)"><path d="M50 14c7 12 7 26 0 40-7-14-7-28 0-40z"/><path d="M50 54C40 44 28 40 16 42c2 14 14 24 34 24z" opacity=".92"/><path d="M50 54c10-10 22-14 34-12-2 14-14 24-34 24z" opacity=".92"/><path d="M50 58C42 46 30 41 20 40c-4 12 2 26 30 30z" opacity=".7"/><path d="M50 58c8-12 20-17 30-18 4 12-2 26-30 30z" opacity=".7"/></g>
+    </svg>
+    <div style="font-size:21px;font-weight:800;color:#1c2b28;margin-bottom:16px;letter-spacing:.5px">宜兴市重点企业商业动态</div>
+    <div style="font-size:13.5px;color:#5f6f6b;line-height:1.9;margin-bottom:26px">本页面信息属于宜兴商务局<br/>请输入密码继续访问</div>
+    <input id="pass-input" type="password" inputmode="numeric" placeholder="请输入密码" autocomplete="off"
+      style="width:100%;border:1.5px solid #d6e0dd;background:#f5f8f7;border-radius:13px;padding:15px 18px;font-size:15px;color:#1c2b28;outline:none;text-align:center;letter-spacing:2px"/>
+    <div id="pass-err" style="display:none;color:#d64545;font-size:12.5px;margin-top:11px">密码错误，请重试</div>
+    <button id="pass-btn" style="width:100%;margin-top:18px;border:none;border-radius:13px;padding:15px;font-size:16px;font-weight:700;color:#fff;background:linear-gradient(90deg,#12876E 0%,#0E5E4E 100%);cursor:pointer;letter-spacing:4px">进入</button>
+  </div>
+</div>
+<script>
+(function(){
+  var PW="123456", KEY="yx_daily_0801_ok";
+  var gate=document.getElementById('pass-gate'),inp=document.getElementById('pass-input'),
+      err=document.getElementById('pass-err'),btn=document.getElementById('pass-btn');
+  function unlock(){gate.parentNode.removeChild(gate);document.body.style.overflow='';}
+  function tryPw(){if(inp.value===PW){try{sessionStorage.setItem(KEY,'1')}catch(e){}unlock();}else{err.style.display='block';inp.value='';inp.focus();}}
+  try{if(sessionStorage.getItem(KEY)==='1'){unlock();return;}}catch(e){}
+  document.body.style.overflow='hidden';
+  btn.addEventListener('click',tryPw);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')tryPw();});
+  setTimeout(function(){inp.focus();},300);
+})();
+</script>
+<div class="wrap">
+  <div class="topbar">
+    <div class="logo">🏙️</div>
+    <div><b>宜兴重点企业商业动态</b><span>每日参阅 · Daily Brief</span></div>
+  </div>
+  <div class="hero">
+    <h1>宜兴市重点企业商业动态</h1>
+    <div class="sub">每日商业动态参阅 · 企业版</div>
+    <div class="date">2026-08-01</div>
+    <div class="meta">编制：宜兴市商务局 · 来源：交易所公告 / 权威财经媒体 / 政府官网</div>
+    <div class="chip">共 <span id="chipN">33</span> 条重点动态 · 对宜启示</div>
+  </div>
+  <div id="dayView">
+    <div class="view-tabs">
+      <div class="view-tab on" data-v="local" onclick="switchView('local')">📍 本地企业</div>
+      <div class="view-tab" data-v="chain" onclick="switchView('chain')">🔗 3+3+N 产业链</div>
+      <div class="view-tab" data-v="track" onclick="switchView('track')">🎯 重点赛道</div>
+    </div>
+    <div class="countbar">当前显示 <b id="cnt">12</b> 条</div>
+    <div class="list" id="list"></div>
+  </div>
+  <div id="histView" style="display:none">
+    <div class="toolbar" style="padding:12px 14px 4px">
+      <input class="search" id="q" placeholder="🔍 搜索历史动态 / 企业 / 关键词…"/>
+      <div class="filters">
+        <select id="fInd"><option value="">全部产业领域</option></select>
+        <select id="fType"><option value="">全部事项分类</option></select>
+        <select id="fCity"><option value="">全部城市</option></select>
+        <select id="fCo"><option value="">全部企业</option></select>
+      </div>
+      <div class="btns">
+        <button class="btn reset" onclick="reset()">重置</button>
+        <button class="btn export" onclick="exportXLSX()">⬇ 导出 Excel</button>
+      </div>
+    </div>
+    <div class="countbar">历史动态 <b id="histCnt">0</b> 条</div>
+    <div class="list" id="histList"></div>
+  </div>
+  <div class="pgfoot">
+    本简报由宜兴市商务局参阅编制 · 数据来源于公开渠道，仅供内部参考<br/>
+    每日更新 · 2026-08-01
+  </div>
+  <div class="day-tabs">
+    <div class="day-tab on" id="tabDay" onclick="switchMode('day')">📅 当日动态</div>
+    <div class="day-tab" id="tabHist" onclick="switchMode('hist')">🗂 历史动态</div>
+  </div>
+</div>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script>
+
+// ===== TAB 1: 📍 本地企业 (≥10) =====
+const DATA_LOCAL=[
+{co:"恒兴新材",ind:"新材料",type:"投资项目",date:"07-30",
+ title:"恒兴新材6亿投建两大精细化工项目——山东碳基+江苏硅基，全面落地「碳-硅双轮驱动」战略",
+ summary:"恒兴新材7月29日召开董事会，审议通过子公司山东衡兴和江苏辰兴分别投资建设天然有机酯醛酸衍生物生产项目和特种精细化工新材料项目，合计投资约6亿元。山东项目聚焦锂电电解液溶剂、食品饲料添加剂（碳基赛道），江苏项目规划有机硅、湿电子化学品、硅树脂等多条产线（硅基赛道），建设期24-30个月，预计2026年内开工，项目建成后将新增高端精细化工产能12万吨/年。",
+ rel:"恒兴新材此次6亿布局，是宜兴精细化工龙头从传统酸酮酯向新能源材料和半导体材料双向升级的标志性动作。湿电子化学品和有机硅直接配套半导体产业链，锂电溶剂对接新能源，使恒兴从单一的精细化工生产商转型为碳基+硅基双轮驱动的平台型新材料企业。对宜兴而言，恒兴正成为连接本地集成电路（雅克、中环）和新能源（远东电池、宜锂）两大战略产业的关键材料纽带，其产品升级将增强宜兴在电子材料和新能源材料两大高附加值赛道的产业集群优势。",
+ city:"宜兴",src:"证券时报",url:"https://www.stcn.com/article/detail/4047540.html"},
+{co:"宜锂科技",ind:"新能源",type:"融资/扩产",date:"07-26",
+ title:"宜锂科技完成A轮融资，11.2亿建年产5200吨固态电池正极材料量产线",
+ summary:"天华新能控股子公司宜锂科技近日完成A轮融资，投资方包括浙江创维新兴产业创投、宜兴环科园产发股权投资基金及远航精密。公司在宜兴天华新能新材料产业园内规划投资11.2亿元，建设19000平方米现代化生产车间，打造年产5200吨全流程固态电池用高镍三元正极材料产线。当前200吨/年中试线已建成并进入试运行，量产线预计2026年底前建成投产。宜锂核心技术团队依托中科院物理所、天目湖先进储能技术研究院。",
+ rel:"宜锂科技A轮融资落地加速了宜兴固态电池产业链的关键一环——正极材料量产。固态电池被业界视为下一代动力电池的终极方向，宜锂依托中科院体系的科研力量抢占正极材料这一高壁垒节点，对宜兴新能源产业集群意义重大。更值得关注的是本地产业链的协同：远航精密参与本轮投资（镍基导体材料）、灵鸽科技承接固态电解质中试线设备——宜兴正从单一环节向固态电池全链条布局演进，这种本地配套的产业生态一旦成型，将形成强大的集群粘性。",
+ city:"宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/roll/2026-07-26/doc-inikcchm0507120.shtml"},
+{co:"卓易信息",ind:"通用人工智能",type:"股份回购",date:"07-23",
+ title:"卓易信息回购落地首笔1399万元，获中国银行无锡分行3600万元回购专项贷款",
+ summary:"卓易信息7月23日首次实施股份回购，回购14万股（占总股本0.1156%），耗资约1398.79万元；7月30日获得中国银行无锡分行出具的股票回购专项贷款承诺函，额度不超过3600万元、期限3年。回购计划总额2000万-4000万元，回购价不超过186元/股，期限不超过3个月。公司2025年归母净利润7973.72万元、同比增142.79%，主营BIOS/BMC固件与云计算基础服务。",
+ rel:"卓易信息回购从计划进入落地，并引入银行专项贷款支持，释放出管理层认为股价被低估的明确信号。用低成本贷款回购股份是成熟资本运作方式，突出公司对自身价值的信心。对宜兴而言，卓易是科创板上市的BIOS/BMC固件领域企业，在AI算力底座中占据独特技术节点。2025年净利翻倍的业绩说明这家小而美的科技公司正处于上升通道，是宜兴通用人工智能板块值得长期重视的核心棋子。",
+ city:"宜兴",src:"财中社",url:"https://m.jrj.com.cn/madapter/finance/2026/07/23170457882284.shtml"},
+{co:"博睿新能",ind:"新能源",type:"项目封顶/投产",date:"07-30",
+ title:"博睿新能宜兴储能项目厂房封顶，年内建成投产将形成年产2GW物理储能设备产能",
+ summary:"据新华社江苏7月30日报道，位于宜兴的博睿新能储能项目厂房主体已于7月顺利封顶，预计年内建成投产，届时形成年产2GW物理储能设备系统产能。物理储能区别于主流锂电化学储能，主打长时、安全、循环寿命长，是新型电力系统对4小时以上长时储能需求增长背景下的新兴技术方向。",
+ rel:"博睿新能项目落地丰富了宜兴储能产业的技术路线。宜兴此前储能集群以远东电池锂电/钠电化学储能为主，博睿新能补上了物理储能这一环，使宜兴在化学储能+物理储能两条路线上都有布局。年产2GW的设备产能规模可观，年内投产将为新能源装备板块贡献新的产值增量。储能技术路线的多元化有助于对冲单一路线的技术与政策风险，增强宜兴产业集群韧性。",
+ city:"宜兴",src:"新华网",url:"http://js.news.cn/20260730/d746a2ee93464a34be81ff06fb7cf5da/c.html"},
+{co:"中晟高科",ind:"节能环保",type:"业绩预警",date:"07-15",
+ title:"中晟高科半年度预亏1000万-1300万，宜兴60MW/120MWh储能电站项目推进中",
+ summary:"中晟高科7月15日发布半年度业绩预告，预计2026上半年归母净利润亏损1000万-1300万元，同比由盈转亏。与此同时，公司转型储能第二增长曲线的动作在持续：位于宜兴新建镇的60MW/120MWh储能电站项目按计划推进建设，年初已控股无锡普睿能源切入储能业务。传统润滑油/环保主业承压，是其向储能+新材料多轮驱动转型的直接动因。",
+ rel:"中晟高科的短期预亏与储能转型并存，折射宜兴中型环保企业寻找第二曲线的普遍焦虑与努力。传统环保工程与润滑油业务天花板已现、利润承压，倒逼企业向储能等高景气赛道延伸。60MW/120MWh电站是其从卖设备/工程向持有运营储能资产模式探索的关键一步。对宜兴而言，这类企业的转型阵痛期需关注——短期业绩波动是必然代价，能否成功切换赛道决定其中长期价值。",
+ city:"宜兴",src:"东方财富",url:"https://finance.eastmoney.com/a/202607273822294540.html"},
+{co:"立霸股份",ind:"高端装备",type:"股价异动",date:"07-23",
+ title:"立霸股份连续异动累计跌超20%，公司澄清主营正常、5%以上股东完成协议转让",
+ summary:"立霸股份7月20日、22日、23日连续发布股票交易异常波动公告，收盘价跌幅偏离值累计超20%。公司澄清家电用复合材料主业生产经营正常，订单、原材料、产销规模无重大变化，无业务转型等重大事项，上半年经营业绩测算未触及业绩预告披露标准。此前7月2日，持股5%以上股东通过公开征集转让方式完成股份协议转让。Q1营收3.95亿元、归母净利3381万元。",
+ rel:"立霸股份的股价异动更多是市场情绪波动而非基本面变化，公司及时澄清体现了规范的信息披露。对宜兴而言，立霸是本地复合材料领域的上市企业，其高端装备+新材料的交叉定位有向数据中心、新能源等新场景延伸的潜力，但当前主业仍以家电复合材料为主、增长平稳。这也提示本地传统制造上市公司：唯有真正切入高景气赛道、拿到实质订单，才能获得可持续的价值重估。",
+ city:"宜兴",src:"东方财富",url:"https://wap.eastmoney.com/a/202607223817340238.html"},
+{co:"鸿羽航空",ind:"高端装备",type:"项目投产",date:"07-27",
+ title:"航空复材项目8月底宜兴投产——鸿羽航空联手匈牙利团队，首款飞机机身明年出口美国",
+ summary:"据无锡市政府7月27日报道，鸿羽航空科技（无锡）有限公司在宜兴丁蜀通航产业园投资建设的航空复合材料生产制造项目，将于8月底正式投产。项目技术带头人、匈牙利航空复材公司董事长安德拉什专程来宜为投产做准备。项目首批试生产产品将于10月下线，预计明年首款研发制造的飞机机身将出口美国。该项目不仅填补了宜兴低空经济产业链高端材料核心短板，还实现了产业链本地配套——由宜兴本地企业提供重要原材料。",
+ rel:"鸿羽航空项目是宜兴低空经济产业集群的标志性突破。依托丁蜀通航产业园，宜兴正从通用航空基础设施向高端航空制造核心环节延伸。航空复材（碳纤维复合材料）是飞机制造的轻量化骨骼，技术壁垒极高，匈牙利团队的技术引进打通了中欧航空产业技术通道。更值得关注的是本地原材料配套的实现——这意味着宜兴已初步形成从原材料到复材制造再到机身出口的航空产业链雏形，是宜兴从传统制造向高端航空制造转型的重要里程碑。",
+ city:"宜兴",src:"无锡市政府网",url:"https://cc.wuxi.gov.cn/doc/2026/07/27/4810158.shtml"},
+{co:"远航精密",ind:"高端装备",type:"股东增持",date:"07-29",
+ title:"远航精密控股股东首次增持5.62万股，耗资101万，计划半年内增持不超过4500万",
+ summary:"远航精密7月29日公告，控股股东远航时代于7月28日通过集中竞价首次增持公司股份5.62万股，增持金额101.34万元，增持后持股比例升至39.7324%。本次增持计划实施期间为公告日起6个月内，计划增持金额不超过4500万元，资金来源为自有资金与专项贷款结合。公司主营电池精密镍基导体材料，2025年营收10.43亿元同比增长22.38%。",
+ rel:"远航精密控股股东启动增持，凸显对公司长期价值的信心。公司主营镍基导体材料是锂电池、固态电池的关键组件，下游绑定新能源产业。尤其值得关注的是远航精密参与宜锂科技A轮融资——镍基材料+固态正极的本地产业链协同正在加速形成。对宜兴而言，远航精密+宜锂科技+灵鸽科技构成固态电池装备材料的小集群，在固态电池产业爆发前夜提前卡位，具有战略性产业布局价值。",
+ city:"宜兴",src:"雷达财经",url:"http://leidacj.com/article/174518"},
+{co:"灵鸽科技",ind:"通用人工智能",type:"业务拓展",date:"07-31",
+ title:"灵鸽科技Q1营收增161%，承接固态电解质中试线，从物料自动化切入固态电池装备",
+ summary:"灵鸽科技2026年Q1营收同比增长161%，业绩爆发主要得益于其在新能源领域的深度拓展。公司凭借在物料自动化处理领域的核心能力，成功切入固态电池装备赛道，已承接固态电解质中试线的自动化设备供应。灵鸽科技是北交所上市的宜兴企业，主营粉粒料处理系统与智能配料产线，客户覆盖锂电池、半导体、新材料等高端制造领域。",
+ rel:"灵鸽科技从物料自动化向固态电池装备延伸，是宜兴制造企业向高景气赛道做技术迁移的典型案例。固态电解质中试线设备技术要求极高（防氧化、超净环境、精密计量），灵鸽能拿下此类订单说明其技术能力已获行业认可。对宜兴而言，灵鸽科技+宜锂科技+远航精密正在形成固态电池设备-正极材料-镍基导体的本地产业集群雏形——这三家企业分别卡位设备、材料、配套，一旦固态电池产业化放量，宜兴将直接受益。",
+ city:"宜兴",src:"东方财富",url:"https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html"},
+{co:"银轮股份",ind:"高端装备",type:"送样/订单",date:"07-26",
+ title:"银轮股份数据中心液冷零部件送样获小批订单，2026年液冷产业化关键之年",
+ summary:"银轮股份7月25日在互动平台披露，公司已定位为数据中心液冷模组零部件供应商，以不锈钢板式换热器等切入。产品已为多家模组客户送样验证，部分客户下达小批订单。5月控股子公司开山银轮与某数据中心整体解决方案商签约，供应108套BTB算力中心液冷散热系统。业内视2026年为服务器液冷产业化应用关键之年。银轮宜兴基地承担部分换热器产能。",
+ rel:"银轮股份切入数据中心液冷赛道，为宜兴热管理产业接入了AI算力这一超级增长极。AI服务器功率密度飙升使液冷从可选变为刚需，2026年被视为液冷元年。银轮宜兴基地是本地高端装备的重要一环，其液冷业务与利通电子的算力租赁、远东股份的AIDC光纤形成算力-散热-连接的本地AI基建配套雏形。从送样到小批订单再到108套系统落地，说明这条赛道正从概念走向订单兑现。",
+ city:"宜兴",src:"证券时报",url:"https://www.stcn.com/article/detail/4041494.html"},
+{co:"中辰股份",ind:"电线电缆",type:"中标",date:"07-30",
+ title:"中辰股份7月中标新能源电缆约2.4亿元，专精特新小巨人持续推进新能源电缆转型",
+ summary:"中辰股份近期公告披露，7月中标/签约新能源电缆订单约2.4亿元。作为国家级专精特新小巨人企业，中辰股份主营电力电缆、新能源电缆及电缆附件，产品已广泛应用于风电、光伏、新能源汽车等领域。2026年Q1营收10.26亿元，净利润5315万元，公司在保持电网电缆基本盘的同时，新能源电缆业务占比持续提升。",
+ rel:"中辰股份2.4亿新能源电缆订单说明宜兴线缆产业向新能源领域转型正在加速兑现。宜兴作为中国线缆之都，传统电力电缆市场增长趋缓，而新能源电缆（风电、光伏、储能）是高附加值增量市场。中辰股份的新能源订单与远东股份的储能电缆、中超控股的航空航天转型，共同构成宜兴线缆产业一业多元的升级态势——不是同质化竞争，而是各自找到差异化的高景气出口。",
+ city:"宜兴",src:"证券时报",url:"https://www.stcn.com/article/detail/4037549.html"},
+{co:"鹏鹞环保",ind:"节能环保",type:"业务进展",date:"07-30",
+ title:"鹏鹞环保业务承订额超7.8亿，SEED低碳水厂已落地缅甸，环保产业持续全国布局",
+ summary:"鹏鹞环保作为中国环保之乡宜兴的龙头环保上市企业，上半年业务承订额已超7.8亿元，涵盖污水处理、水环境综合治理、环卫一体化等领域。公司自主研发的SEED低碳装备化水厂已成功落地缅甸等海外市场，运营成本较传统水厂降低约30%，成为宜兴环保装备出海的典型案例。鹏鹞为宜兴环科园入驻的创业板上市公司。",
+ rel:"鹏鹞环保7.8亿业务承订额和SEED水厂出海，展示了宜兴环保产业的全国竞争力与国际化能力。宜兴环科园是中国唯一的国家级环保科技工业园区，聚集了数百家环保企业，鹏鹞是其中的装备化、智能化转型标杆。SEED低碳水厂降低30%运营成本的突破，意味着宜兴环保装备已从工程承包向产品化、标准化、可复制的装备出口升级——这对宜兴环保产业集群的整体升级具有示范意义。",
+ city:"宜兴",src:"东方财富",url:"https://finance.eastmoney.com/a/202605203743216739.html"}
+];
+
+// ===== TAB 2: 🔗 3+3+N 产业链 (≥10) =====
+const DATA_CHAIN=[
+{co:"远东股份",ind:"电线电缆",tier:"tier1",type:"股价涨停",date:"07-31",
+ title:"远东股份7月31日涨停，2025年扭亏为盈、上半年订单超119亿，AIDC光纤定增推进",
+ summary:"远东股份7月31日盘中涨停、报14.1元涨9.98%。公司2025年扭亏为盈、经营现金流改善。2026年1-6月中标/签约千万元以上合同订单合计119.48亿元，单月订单稳定在17-26亿元，集中在电网、储能、AI配套等高景气赛道。7月27日，20亿AIDC用全合成光纤预制棒定增申请获上交所受理，计划形成年产800吨（2026年）至2100吨（2027年）光棒及配套光纤产能。半年报定于8月22日披露。",
+ rel:"远东股份涨停是宜兴龙头企业经营质量修复的直观信号。作为宜兴最大的制造业企业，远东同时握有电网电缆（基本盘）、储能（出海放量）、AIDC光纤（AI基建新曲线）三条高景气主线，单月订单17-26亿的体量印证需求旺盛。定增受理意味着AIDC光纤项目进入审批通道——从传统电缆龙头跨入AI算力基础设施核心材料领域，远东正在完成一次底层能力的升级。对宜兴而言，龙头企业的战略转向将带动整个线缆产业集群向上游高附加值材料迁移。",
+ city:"宜兴",src:"第一财经",url:"https://www.yicai.com/news/103293662.html"},
+{co:"中超控股",ind:"电线电缆",tier:"tier1",type:"定增/转型",date:"07-04",
+ title:"中超控股9.92亿定增获深交所审核通过，加码航空航天高温合金精密铸造项目",
+ summary:"中超控股向特定对象发行股票募集不超过9.92亿元申请已获深交所上市审核中心审核通过。募资投向航空航天发动机及燃气轮机高端零部件制造项目（7亿元）和先进高温合金精密成型智能制造技术研发项目（1.5亿元），由子公司江苏精铸在宜兴实施，达产后将形成年产1000吨高温合金精密铸件产能。国元证券担任保荐机构。公司传统电缆主业承压，高温合金第二主业已获航发黎明、成发等军工客户批量供货。",
+ rel:"中超控股定增获批标志宜兴电缆龙头向航空航天高端制造的转型获得资本市场正式背书。1000吨高温合金精铸年产能是航空发动机、燃气轮机热端部件的核心制造环节，技术壁垒远超传统电缆。对宜兴而言，中超转型的意义在于：传统线缆产业不只是向新能源电缆升级，还能跨入航空航天这一技术密集、附加值极高的赛道——这为宜兴线缆之都的产业升级打开了全新的想象空间。",
+ city:"宜兴",src:"深交所公告",url:"https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-04/2f373e49-5c8e-49e0-90a0-daa9f743ec9a.PDF"},
+{co:"雅克科技",ind:"集成电路",tier:"tier2",type:"供应链/长鑫上市",date:"07-27",
+ title:"长鑫科技科创板上市，雅克科技作为60%前驱体份额的核心供应商深度受益国产存储扩产",
+ summary:"长鑫科技（688825）在科创板上市，募资295亿元，成为年内A股最大IPO。雅克科技被列为其上游供应链头号国产材料供应商——在长鑫前驱体采购份额中占比60%以上，17nm制程High-k前驱体由雅克独家供应，单客户贡献雅克35%营收（约20亿元）。长鑫规划2028年月产能从20万片扩至50万片，雅克的DRAM前驱体订单将同步翻倍增长。公司Q1营收19.73亿元、净利2.67亿元，半年报8月26日披露。",
+ rel:"长鑫科技上市为雅克科技打开了国产DRAM扩产的确定性需求空间。作为全球前驱体市占率18%、与默克、信越三分天下的企业，雅克深度绑定长鑫这一国产DRAM主力军，产能翻倍意味着耗材订单同步翻倍。对宜兴而言，雅克是本地半导体材料的绝对龙头，其从前驱体向光刻胶、电子特气延伸的平台化升级，使宜兴在国家半导体材料自主可控战略中的地位持续提升。长鑫+X的战略客户绑定，为雅克未来5-10年的增长提供了清晰的可预见性。",
+ city:"宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-27/doc-inikfxaw8467887.shtml"},
+{co:"中环领先",ind:"集成电路",tier:"tier2",type:"供应链/产能扩张",date:"07-27",
+ title:"中环领先绑定长鑫战略供应商体系，深圳12英寸新建项目启动，8英寸月冲140万片",
+ summary:"随长鑫科技上市，TCL科技以1.58亿元获配战略股份，子公司中环领先被纳入长鑫战略供应商体系。中环是长鑫12英寸重掺外延片/抛光片核心供应商之一，预计2026年对长鑫出货同比增50%-80%、毛利率25%+。产能方面，宜兴基地12英寸产线稳定运行多年，深圳新建12英寸项目启动（建设期60个月），8英寸产能目标2026年月产140万片（宜兴、天津、呼和浩特协同）。",
+ rel:"中环领先绑定长鑫DRAM生态并参与战略配售，将双方从供应商关系升级为资本+产业双纽带绑定。对于长鑫来说，国产大硅片是供应链安全的基石；对于中环来说，长鑫的DRAM产能翻倍提供了确定性的增量需求。对宜兴而言，中环（硅片）+雅克（前驱体）同时进入长鑫核心供应链，意味着宜兴半导体材料双龙头已嵌入国产存储产业链的心脏地带——这是宜兴在国家半导体自主可控战略中不可替代产业地位的最新佐证。",
+ city:"宜兴",src:"IT之家",url:"https://www.ithome.com/0/977/004.htm"},
+{co:"帝科股份",ind:"新能源",tier:"tier2",type:"定增/战略转型",date:"07-29",
+ title:"帝科股份27.6亿定增双赛道扩容——光伏少银化升级+存储芯片封测跨入百亿新市场",
+ summary:"帝科股份2026年度向特定对象发行股票拟募资27.6亿元，7月8日发布修订稿。其中1.88亿投向年产2000吨贱金属少银光伏浆料项目（TOPCon银铜+混合镍贱金属），1.74亿投向下一代光伏浆料研发（纯铜/钙钛矿/太空光伏），11.4亿投向存储芯片封装测试基地（达产后年封装8500万颗、测试超亿颗），4.32亿投向半导体封装研发中心。公司Q1营收65.67亿增61.9%，扣非净利增205.26%。",
+ rel:"帝科股份27.6亿定增是宜兴新能源材料龙头向半导体产业跃迁的关键动作。从全球TOP3光伏银浆供应商，到同时布局存储芯片封测的百亿级新市场，帝科正在完成从单一光伏材料向'光伏+半导体'双平台电子材料企业的蜕变。存储芯片封测基地年封装8500万颗的产能规划，意味着宜兴将在半导体产业链上新增一个中后道制造节点。对宜兴而言，帝科+雅克+中环的组合正在从硅片-前驱体向上游延伸至封测-封装材料，集成电路产业集群的完整度显著提升。",
+ city:"宜兴",src:"证券之星",url:"https://x.stockstar.com/detail/20260713094914000007"},
+{co:"英矽智能",ind:"生命健康",tier:"tier2",type:"业绩爆发/BD合作",date:"07-09",
+ title:"英矽智能半年营收增272%扭亏为盈，四笔BD合作近70亿美元，AI原创药进入Ⅲ期临床",
+ summary:"港股AI制药第一股英矽智能7月9日发布2026年中期盈利预喜：上半年收入约1.025亿-1.065亿美元，同比增272.7%-287.3%；净利润3350万-3950万美元，成功扭亏。2026年上半年落地4笔大额BD合作（施维雅8.88亿、礼来27.5亿、SK 25亿、武田6亿美元），潜在总额近70亿美元。核心管线Rentosertib（AI原创IPF药物）正式启动Ⅲ期临床。公司已落户宜兴陶都科技新城。",
+ rel:"英矽智能扭亏+70亿美元BD，标志着AI制药从概念验证进入商业化兑现阶段。作为港股AI制药第一股，英矽半年拿下四家全球顶级药企合作，其Pharma.AI平台已在全球Top 20药企中覆盖13家。对宜兴而言，英矽智能落户陶都科技新城的战略价值远不止一家上市公司——它是宜兴生命健康产业对标全球前沿科技的旗帜，AI制药能力的本地化将带动宜兴药谷在创新药发现环节建立差异化竞争力，吸引更多上下游企业集聚。",
+ city:"宜兴",src:"36氪",url:"https://36kr.com/p/3890563826809475"},
+{co:"亨鑫科技",ind:"电线电缆",tier:"tier1",type:"中标",date:"07-21",
+ title:"亨鑫科技子公司中标2026青海太阳能热发电项目——通信线缆企业延伸新能源工程",
+ summary:"港股上市的宜兴通信线缆企业亨鑫科技（01082.HK）7月21日公告，子公司在2026年青海太阳能热发电项目中成功中标。亨鑫主营射频电缆、通信线缆，此次切入光热发电项目，是从通信基础设施向新能源工程领域的延伸。青海是国内光热发电示范基地集中地，光热因可配置储热、出力稳定，被视为新型电力系统的重要调峰电源。",
+ rel:"亨鑫科技中标青海光热项目，展示了宜兴线缆企业向新能源工程跨界的又一路径。与远东（AIDC光纤）、中超（航空航天）的转型方向不同，亨鑫选择依托通信线缆的工程能力切入光热发电这一细分新能源赛道。对宜兴而言，这再次印证本地线缆产业集群并未固守传统市场，而是各自寻找差异化的高景气出口——有的向AI基建，有的向航空航天，有的向新能源工程。这种一业多元、各展所长的转型生态，正是宜兴传统优势产业保持增长动能的底层逻辑。",
+ city:"宜兴",src:"路透",url:"https://www.tradingview.com/news/reuters.com,2026:newsml_FWN43N15U:0-hengxin-technology-says-subsidiary-wins-bid-for-2026-solar-thermal-projects-in-qinghai/"},
+{co:"中国稀土控股",ind:"集成电路",tier:"tier2",type:"行业景气",date:"07-29",
+ title:"稀土价格高位运行，氧化镨钕同比涨71.7%；中国稀土控股仍停牌、推进复牌",
+ summary:"2026年稀土价格持续高企，中国稀土行业协会稀土价格指数7月末维持在268-270高位，氧化镨钕均价约73.99万元/吨、较2025年上半年同期上涨71.7%，主因供给端指标增速放缓（首批同比仅增5.2%）叠加新能源车、机器人需求快增（上半年新能源车产量超700万辆、工业机器人产量同比增47.8%）。宜兴关联的中国稀土控股（00769.HK）自2025年6月18日起停牌，7月9日迁址并披露复牌进展。",
+ rel:"稀土价格的强势为宜兴新材料产业提供了有利的行业背景。稀土是新能源汽车驱动电机、人形机器人关节等的战略性原材料，价格上涨反映下游高端制造需求旺盛。对宜兴而言，虽然中国稀土控股目前仍处停牌整改期、短期不具投资参考性，但稀土作为工业维生素的战略地位持续凸显，与宜兴新能源、高端装备产业存在上下游联动。产业机会仍在，个股合规整改需分开看待。",
+ city:"宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-29/doc-iniknmic0030571.shtml"},
+{co:"远程股份",ind:"电线电缆",tier:"tier1",type:"业绩预警",date:"07-15",
+ title:"远程股份上半年预亏6000-9000万，铜价高企侵蚀线缆利润，主导全球首个750kV超高压国际标准",
+ summary:"远程股份7月15日发布半年度业绩预告，预计上半年归母净利润亏损6000万-9000万元，同比转亏，主因铜价高位运行导致线缆原材料成本大幅上升、毛利率承压。公司作为全球首个750kV超高压电缆国际标准的主导制定者，在超高压电缆领域保持技术领先地位。远程股份为宜兴深市主板上市线缆企业。",
+ rel:"远程股份预亏再次凸显铜价高企对线缆行业的系统性压力。宜兴作为线缆之都，产业集中度高，铜价波动对全行业的利润冲击巨大。但远程在750kV超高压电缆国际标准上的主导权展示了技术护城河的深度——超高压电缆是高壁垒细分领域，技术标准制定者享有先发优势。对宜兴而言，线缆产业走出同质化价格竞争，向超高压、特种电缆等高附加值领域升级，是全行业的结构性课题。",
+ city:"宜兴",src:"中国证券报",url:"https://paper.cnstock.com/html/2026-07/15/content_2244447.htm"},
+{co:"恒翼生物",ind:"生命健康",tier:"tier2",type:"项目竣工",date:"07-02",
+ title:"恒翼生物10.51亿宜兴创新药项目竣工，预留一年全流程验证——年产3亿单位创新药",
+ summary:"据宜兴市发改委7月2日报道，位于高塍镇宜药健康科技园内的恒翼生物医药（江苏）有限公司，总投资10.51亿元的高端创新药项目已竣工落成，生产设备定制完成，两条生产线满产后年产能达3亿单位，单体产能在国内同类项目中位居前列。企业并未急于投产，而是主动预留一年时间用于工艺打磨和全流程合规验证，确保高标准量产。",
+ rel:"恒翼生物10.51亿项目的竣工是宜兴生命健康产业从招商到投产的关键节点。3亿单位年产能在国内创新药CDMO领域位居前列，将有效填补高端创新药产能空白。更值得关注的是其预留一年做验证的审慎态度——这说明企业追求的不是速度而是品质，与宜兴药谷打造高质量生物医药集群的定位高度契合。恒翼+英矽智能的组合，使宜兴在创新药研发+制造两端都拥有了有分量的标杆企业。",
+ city:"宜兴",src:"宜兴市发改委",url:"http://www.yixing.gov.cn/doc/2026/07/02/1403222.shtml"}
+];
+
+// ===== TAB 3: 🎯 重点赛道 (≥12) =====
+const DATA_TRACK=[
+{co:"利通电子",track:"AI算力",ind:"高端装备",type:"风险提示/加码算力",date:"07-30",
+ title:"利通电子高位三日跌超20%发异动公告，新增50亿授信+40亿担保加码算力",
+ summary:"利通电子7月30日公告，股票7月28-30日连续三日收盘价跌幅偏离值累计达20%。公司称算力运营与供应链稳定可保障交付，但提示客户集中、供应链波动、竞争加剧等风险。此前7月1日公司新增不超50亿授信（总额度150亿）、新增不超40亿担保（总额度120亿）。7月15日披露半年业绩预告，净利预增1173%-1368%，算力经销业务爆发。7月17日股东会以超99%支持率通过所有议案。",
+ rel:"利通电子高位回调是AI算力最热赛道的一次冷静。公司从精密金属结构件跨界算力租赁，上半年净利增逾11倍堪称现象级，但120亿担保额度背后的高杠杆扩张也需警惕——算力是重资本、强周期赛道，需求节奏和芯片供应的任何波动都会放大业绩弹性。对宜兴而言，利通是本地制造业拥抱新经济最激进的标杆案例——其成功证明宜兴也能孵化出AI算力领域的上市公司，但其高杠杆扩张模式也提示：在为二次创业企业喝彩的同时，需要关注财务稳健性。",
+ city:"宜兴",src:"东方财富",url:"https://finance.eastmoney.com/a/202607303826763815.html"},
+{co:"英伟达",track:"AI算力",ind:"集成电路",type:"产业链/数据中心",date:"07-27",
+ title:"英伟达正与OpenAI洽谈提供2500亿美元融资担保，助推史上最大数据中心项目",
+ summary:"据新浪财经7月27日报道，英伟达正就为OpenAI提供约2500亿美元担保展开谈判。该担保将帮助ChatGPT开发商租赁软银在俄亥俄州南部开发的10吉瓦项目，项目总成本可能超5000亿美元（含芯片），将成为迄今最大的数据中心项目。英伟达2026年在AI基础设施的投资承诺已突破400亿美元。此前英伟达Q2财报超预期，数据中心季度营收752亿美元同比增近一倍。",
+ rel:"英伟达2500亿美元担保OpenAI建设史上最大数据中心，标志着AI算力基础设施投资进入5000亿美元量级的新纪元。这对宜兴产业意味着多重信号：其一，全球算力需求极速膨胀，远东AIDC光纤、利通算力租赁、银轮液冷等本地企业直接受益；其二，芯片供应链的紧张将推动国产替代加速，雅克（前驱体）、中环（硅片）、帝科（封测）的本土供应链战略价值持续提升；其三，电力基础设施的巨量需求将刺激储能和新能源产业发展，宜兴在储能领域（远东电池、博睿新能、中晟高科）的布局正踩在风口上。",
+ city:"美国",src:"新浪财经",url:"https://finance.sina.com.cn/stock/usstock/c/2026-07-27/doc-inikevrt0737790.shtml"},
+{co:"英伟达",track:"AI算力",ind:"集成电路",type:"财报/技术路线",date:"07-31",
+ title:"英伟达Q2财报全面超预期，Vera Rubin下半年发货，目标成为全球领先CPU供应商",
+ summary:"英伟达最新财报全面超预期：数据中心季度营收752亿美元同比增近一倍，Blackwell架构产品环比增17%。CEO黄仁勋宣布Vera Rubin下一代AI系统将于今年下半年开始生产发货，Vera CPU为英伟达开辟2000亿美元新市场。CFO表示公司目标是成为全球领先CPU供应商。英伟达还宣布将营收分为数据中心和边缘计算两大部分，后者涵盖PC、游戏、机器人、汽车等。",
+ rel:"英伟达从GPU霸主向CPU领域扩张，标志AI算力竞争进入全栈式时代。Vera Rubin下半年发货对宜兴产业有三层影响：一是远东AIDC光纤的客户群（全球云服务商）采购AI基础设施的节奏将加速；二是算力芯片的持续迭代将推高液冷需求，银轮股份的不锈钢板式换热器迎来更大的市场窗口；三是英伟达边缘计算的布局（机器人、汽车）与宜兴的低空经济（鸿羽航空）、智能制造（灵鸽科技）存在技术协同潜力。",
+ city:"美国",src:"创投观察台",url:"http://cambridgeuk.telegramn.co/content/20260731-09d40999581.html"},
+{co:"恒翼生物",track:"生命健康",ind:"生命健康",type:"基地竣工",date:"07-02",
+ title:"恒翼生物宜兴生产基地竣工，10.51亿建国内最大单体创新药产能之一——年产3亿单位",
+ summary:"恒翼生物医药（江苏）有限公司在宜兴高塍镇宜药健康科技园内投资10.51亿元建设的生产基地已竣工落成。两条生产线满产后年创新药产能可达3亿单位，单体产能在国内同类创新药项目中位居前列。企业选择预留一年时间用于工艺打磨和全流程合规验证而非急于投产，展现了追求质量的审慎态度。恒翼生物深耕小分子创新药与靶向药赛道，主攻肿瘤、自身免疫、代谢类重大疾病。",
+ rel:"恒翼生物10.51亿项目使宜兴生命健康产业具备了国内领先的创新药CDMO产能。年产3亿单位的体量、一年验证期的质量追求，与宜兴药谷致力于打造高品质生物医药集群的定位高度契合。对宜兴而言，恒翼生物（制造）+英矽智能（AI药物发现）形成创新药研发到生产的全链条——英矽用AI加速发现新药分子，恒翼提供高标准产能承接，这种研发-生产的闭环一旦跑通，宜兴将在国内创新药产业链中获得独特地位。",
+ city:"宜兴",src:"宜兴市发改委",url:"http://www.yixing.gov.cn/doc/2026/07/02/1403222.shtml"},
+{co:"帝科股份",track:"半导体封测",ind:"新能源",type:"战略转型",date:"07-29",
+ title:"帝科股份27.6亿定增中11.4亿投向存储芯片封测——从光伏浆料跨入百亿半导体市场",
+ summary:"帝科股份27.6亿元定增中，存储芯片封装测试基地项目拟使用募集资金11.4亿元（总投资12.23亿），达产后将新增年封装产能8500万颗、测试产能超亿颗。同时4.32亿元投向半导体封装研发中心。公司从全球TOP3光伏银浆供应商，向覆盖光伏材料+存储芯片封测的综合电子材料平台转型。Q1营收65.67亿增61.9%，扣非净利增205.26%。",
+ rel:"帝科股份跨入存储芯片封测是宜兴半导体产业链的重要拼图。此前宜兴在半导体前道材料（雅克前驱体、中环硅片）有强项，但后道封测环节空白。帝科11.4亿封测基地补齐了这一短板，使宜兴半导体产业从材料延伸至制造——考虑到长鑫科技刚在科创板上市并计划大幅扩产，帝科的封测产能有望就近配套长鑫的DRAM芯片封测需求。这对宜兴集成电路产业集群的完整度是一次重要提升。",
+ city:"宜兴",src:"证券之星",url:"https://x.stockstar.com/detail/20260713094914000007"},
+{co:"鸿羽航空",track:"低空经济",ind:"高端装备",type:"项目投产",date:"07-27",
+ title:"鸿羽航空复材项目8月底宜兴投产——匈牙利技术+宜兴制造，首款飞机机身明年出口美国",
+ summary:"鸿羽航空科技（无锡）有限公司在宜兴丁蜀通航产业园投资建设的航空复合材料生产制造项目，将于8月底正式投产。项目由匈牙利航空复材公司董事长安德拉什担任技术带头人，首批试生产产品10月下线，明年首款飞机机身将出口美国，标志着宜兴低空高端制造产品正式进军国际市场。项目已实现产业链本地配套——由宜兴本地企业提供重要原材料。宜兴已集聚泛低空经济产业链企业40余家。",
+ rel:"鸿羽航空飞机机身出口美国将是宜兴制造从'中国线缆之都'向'长三角航空制造节点'跃升的标志性事件。碳纤维航空复材是飞机制造的轻量化核心材料，匈牙利团队的技术引进打通了中欧航空产业技术通道。宜兴本地原材料配套的实现，说明低空经济产业生态已初步成形。对宜兴而言，丁蜀通航产业园+鸿羽航空+此前落地的斯普瑞神坤火箭和天睿达低空雷达企业，正在形成从材料到整机到测控的低空经济全链条雏形。",
+ city:"宜兴",src:"无锡市政府网",url:"https://cc.wuxi.gov.cn/doc/2026/07/27/4810158.shtml"},
+{co:"英矽智能",track:"AI制药",ind:"生命健康",type:"扭亏/BD合作",date:"07-09",
+ title:"英矽智能半年营收增272%扭亏为盈，四笔BD近70亿美元——AI原创药进入Ⅲ期临床",
+ summary:"港股AI制药第一股英矽智能2026年上半年收入约1.025亿-1.065亿美元（同比增272.7%-287.3%），净利润3350万-3950万美元，成功扭亏。四笔与全球顶级药企的BD合作潜在总额近70亿美元（施维雅、礼来、SK、武田）。核心管线Rentosertib（全球首款AI全程设计IPF新药）正式启动Ⅲ期临床。公司自有Pharma.AI平台已提名31款临床前候选化合物，13款获IND批件。",
+ rel:"英矽智能扭亏为盈是AI制药赛道的里程碑事件——标志着AI驱动药物发现已从烧钱阶段进入商业化验证期。全球Top 20药企中有13家是其客户，说明其Pharma.AI平台的技术壁垒得到了最高级别的行业认可。对宜兴而言，英矽智能落户陶都科技新城的战略价值超越了单个企业的经济贡献——它是一面吸引全球生物医药人才和资本的旗帜，带动宜兴从传统药企制造基地向AI驱动的创新药策源地升级，这是宜兴生命健康产业的核心竞争力之源。",
+ city:"宜兴",src:"36氪",url:"https://36kr.com/p/3890563826809475"},
+{co:"中超控股",track:"航空航天",ind:"电线电缆",type:"项目建设",date:"07-27",
+ title:"中超控股航空航天高温合金项目进入施工阶段——电缆龙头转型高温合金精密铸造",
+ summary:"中超控股7月27日披露，航空航天发动机及燃气轮机高端零部件制造项目的备案、环评等审批手续已完成，目前处于建设阶段。项目由子公司江苏精铸在宜兴实施，定增募资9.92亿元已获深交所审核通过，达产后将形成年产1000吨高温合金精密铸件产能。公司已为中国航发黎明、成发、商发等军工客户批量供货高温合金铸件。上海精铸2024年主营业务收入同比增幅82.20%。",
+ rel:"中超控股航空航天项目从审批进入施工，标志宜兴电缆龙头的第二曲线开始落地。高温合金精密铸造是航空发动机和燃气轮机热端部件的核心工艺，技术壁垒和附加值远超传统电缆。对宜兴而言，中超的转型不仅是企业行为，更是宜兴高端装备产业从大路货向卡脖子技术升级的缩影——航空航天精密铸件的本地化生产将吸引上下游精密制造、无损检测、热处理等配套企业集聚，有望在丁蜀通航产业园周边形成航空精密制造小集群。",
+ city:"宜兴",src:"证券时报",url:"https://stock.stockstar.com/RB2026072700032798.shtml"},
+{co:"银轮股份",track:"AI算力液冷",ind:"高端装备",type:"送样/订单",date:"07-25",
+ title:"银轮股份数据中心液冷零部件送样获小批订单，开山银轮拿108套BTB算力液冷系统",
+ summary:"银轮股份7月25日披露，已定位为数据中心液冷模组零部件供应商，以不锈钢板式换热器切入，产品已为多家模组客户送样验证、部分客户下达小批订单。5月子公司开山银轮与某数据中心整体解决方案商签约，供应108套BTB算力中心液冷散热系统。业内在2026年SNEC后将2026年定义为服务器液冷产业化应用关键之年。银轮宜兴基地承担换热器产能。",
+ rel:"银轮股份切入液冷是宜兴热管理产业接入AI算力超级增长极的标志。AI服务器功率密度飙升使液冷从可选变为刚需，2026年被视为液冷元年。银轮凭借汽车热管理的技术积累顺势卡位，从零部件送样到108套系统落地，说明这条赛道正从概念走向订单兑现。对宜兴而言，银轮液冷+利通算力租赁+远东AIDC光纤构成宜兴AI基建本地生态——散热+算力+连接的三位一体，虽规模尚小但产业协同的雏形已经显现。",
+ city:"宜兴",src:"证券时报",url:"https://www.stcn.com/article/detail/4041494.html"},
+{co:"宜锂科技",track:"固态电池",ind:"新能源",type:"融资/扩产",date:"07-26",
+ title:"宜锂科技A轮融资落地，11.2亿建5200吨固态正极材料线——年底投产卡位下一代电池",
+ summary:"天华新能控股子公司宜锂科技完成A轮融资（投资方含远航精密、宜兴环科园产投），在宜兴规划投资11.2亿元建设年产5200吨固态电池用高镍三元正极材料产线。当前200吨/年中试线已试运行，量产线预计2026年底前建成投产。公司依托中科院物理所、天目湖先进储能技术研究院的科研力量。远航精密同步战略投资宜锂科技，形成镍基材料+固态正极的协同。",
+ rel:"固态电池是动力电池的终极技术方向，产业爆发前夜赛道卡位至关重要。宜锂科技5200吨固态正极产能+远航精密镍基材料+灵鸽科技中试线设备，构成宜兴固态电池产业链的雏形。对宜兴而言，这是一步重要的先手棋——固态电池产业化目前虽处早期（2027-2028年是关键节点），但一旦技术路线确立，率先布局的城市将享受最大的产业红利。宜兴在锂电池正极（宜锂）、负极材料、固态电解质设备三个环节都已经有企业卡位，产业生态的基础正在形成。",
+ city:"宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/roll/2026-07-26/doc-inikcchm0507120.shtml"},
+{co:"灵鸽科技",track:"固态电池",ind:"通用人工智能",type:"业绩增长",date:"07-31",
+ title:"灵鸽科技Q1营收增161%——从物料自动化切入固态电池装备，承接固态电解质中试线",
+ summary:"灵鸽科技2026年Q1营收同比增161%，业绩爆发来自新能源领域的深度拓展。公司凭借在粉粒料自动化处理系统的核心能力切入固态电池装备赛道，已承接固态电解质中试线的自动化设备供应。灵鸽是北交所上市的宜兴企业，主营粉粒料处理系统与智能配料产线，客户覆盖锂电池、半导体、新材料等领域。",
+ rel:"灵鸽科技是宜兴制造企业以核心能力向新赛道做技术迁移的典范。固态电解质中试线设备对防氧化、超净环境、精密计量要求极高，灵鸽能拿下此类订单证明其技术能力已获行业顶级客户认可。对宜兴而言，灵鸽科技+宜锂科技+远航精密形成的固态电池装备-材料小集群，是宜兴在未来3-5年固态电池产业化浪潮中抢占先机的核心筹码——链条越完整、越早跑通，产业粘性越强。",
+ city:"宜兴",src:"东方财富",url:"https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html"},
+{co:"百信信息",track:"芯片生态",ind:"通用人工智能",type:"产业布局",date:"07-08",
+ title:"百信信息牵头宜兴建全国首个RISC-V芯片产业制造基地——一期投资2亿，年产10万台AIPC",
+ summary:"据无锡市政府7月8日报道，宜兴正在打造全国首个RISC-V芯片产业制造基地。中国信创领军企业百信信息、北京开源芯片研究院、雄安安算等已完成陶都科技新城注册，覆盖从基础研发到生产全链条。一期将投资2亿元用于整机产线、展示交流中心建设，建成后将实现年产10万台AIPC整机生产能力。长三角RISC-V产业技术联盟已落地无锡。近期厂房已启动装修，预计年内实现生产。",
+ rel:"百信信息牵头的RISC-V芯片产业制造基地是宜兴集成电路产业从材料端向设计-制造-应用全链条延伸的战略布局。RISC-V作为开源芯片指令集架构，是中国突破x86/ARM垄断的关键技术路线。宜兴抢先布局全国首个RISC-V制造基地，不仅抓住了芯片自主可控的政策窗口，更与本地已有的半导体材料产业（雅克、中环）形成设计-材料-制造-整机的链条联动。对宜兴而言，这是从半导体材料供应地向芯片产业制造高地跃迁的关键一步。",
+ city:"宜兴",src:"无锡市政府网",url:"https://www.wuxi.gov.cn/doc/2026/07/08/4801467.shtml"}
+];
+
+// ===== HISTORY (精简归档) =====
+const HISTORY=[
+{cdate:"2026-07-31",co:"远东股份",ind:"电线电缆",t1:"股价涨停",title:"7/31涨停、2025扭亏为盈，上半年订单119亿，AIDC光纤定增受理",rel:"龙头经营质量修复",src:"第一财经",url:"https://www.yicai.com/news/103293662.html"},
+{cdate:"2026-07-31",co:"利通电子",ind:"高端装备",t1:"风险提示",title:"高位三日跌超20%发异动，新增50亿授信加码算力，半年净利增逾11倍",rel:"AI算力赛道风险提示",src:"东方财富",url:"https://finance.eastmoney.com/a/202607303826763815.html"},
+{cdate:"2026-07-31",co:"恒兴新材",ind:"新材料",t1:"投资项目",title:"6亿投建两大精细化工项目，碳基+硅基双轮驱动，新增12万吨产能",rel:"精细化工龙头平台化升级",src:"证券时报",url:"https://www.stcn.com/article/detail/4047540.html"},
+{cdate:"2026-07-31",co:"帝科股份",ind:"新能源",t1:"定增/转型",title:"27.6亿定增双赛道扩容，存储芯片封测+光伏少银，跨入百亿半导体市场",rel:"光伏龙头向半导体跃迁",src:"证券之星",url:"https://x.stockstar.com/detail/20260713094914000007"},
+{cdate:"2026-07-31",co:"银轮股份",ind:"高端装备",t1:"送样/订单",title:"数据中心液冷送样获小批订单，开山银轮拿108套BTB液冷系统",rel:"热管理接入AI算力",src:"证券时报",url:"https://www.stcn.com/article/detail/4041494.html"},
+{cdate:"2026-07-31",co:"雅克科技",ind:"集成电路",t1:"供应链",title:"长鑫科创板上市，雅克为核心前驱体供应商，份额60%+",rel:"深度绑定国产存储扩产",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-27/doc-inikfxaw8467887.shtml"},
+{cdate:"2026-07-31",co:"中环领先",ind:"集成电路",t1:"供应链",title:"绑定长鑫战略供应商，深圳新建12英寸项目，8英寸冲月140万片",rel:"半导体硅片链式配套",src:"IT之家",url:"https://www.ithome.com/0/977/004.htm"},
+{cdate:"2026-07-31",co:"英矽智能",ind:"生命健康",t1:"扭亏/BD",title:"半年营收增272%扭亏，四笔BD近70亿美元，AI原创药Ⅲ期临床",rel:"AI制药商业化验证",src:"36氪",url:"https://36kr.com/p/3890563826809475"},
+{cdate:"2026-07-31",co:"宜锂科技",ind:"新能源",t1:"融资/扩产",title:"完成A轮融资，11.2亿建年产5200吨固态正极材料线，年底投产",rel:"填补宜兴固态正极空白",src:"新浪财经",url:"https://finance.sina.com.cn/roll/2026-07-26/doc-inikcchm0507120.shtml"},
+{cdate:"2026-07-31",co:"中超控股",ind:"电线电缆",t1:"定增/转型",title:"9.92亿定增获深交所审核通过，航空航天高温合金项目进入施工阶段",rel:"电缆龙头高端转型落地",src:"深交所公告",url:"https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-04/2f373e49-5c8e-49e0-90a0-daa9f743ec9a.PDF"},
+{cdate:"2026-07-31",co:"鸿羽航空",ind:"高端装备",t1:"项目投产",title:"航空复材项目8月底宜兴投产，首款飞机机身明年出口美国",rel:"低空经济高端制造突破",src:"无锡市政府网",url:"https://cc.wuxi.gov.cn/doc/2026/07/27/4810158.shtml"},
+{cdate:"2026-07-31",co:"恒翼生物",ind:"生命健康",t1:"基地竣工",title:"10.51亿宜兴创新药基地竣工，年产3亿单位，预留一年全流程验证",rel:"创新药CDMO产能落地",src:"宜兴市发改委",url:"http://www.yixing.gov.cn/doc/2026/07/02/1403222.shtml"},
+{cdate:"2026-07-31",co:"中晟高科",ind:"节能环保",t1:"业绩预警",title:"半年预亏1000-1300万，宜兴60MW/120MWh储能电站推进",rel:"环保企业储能转型阵痛",src:"东方财富",url:"https://finance.eastmoney.com/a/202607273822294540.html"},
+{cdate:"2026-07-31",co:"博睿新能",ind:"新能源",t1:"项目封顶",title:"宜兴储能项目厂房封顶，年内投产2GW物理储能产能",rel:"储能技术路线多元化",src:"新华网",url:"http://js.news.cn/20260730/d746a2ee93464a34be81ff06fb7cf5da/c.html"},
+{cdate:"2026-07-31",co:"亨鑫科技",ind:"电线电缆",t1:"中标",title:"子公司中标2026青海太阳能热发电项目",rel:"线缆企业延伸新能源工程",src:"路透",url:"https://www.tradingview.com/news/reuters.com,2026:newsml_FWN43N15U:0"},
+{cdate:"2026-07-31",co:"远航精密",ind:"高端装备",t1:"股东增持",title:"控股股东首次增持5.62万股，计划半年增持不超过4500万",rel:"镍基材料信心凸显",src:"雷达财经",url:"http://leidacj.com/article/174518"},
+{cdate:"2026-07-31",co:"中国稀土控股",ind:"集成电路",t1:"行业景气",title:"稀土价格高位，氧化镨钕同比涨71.7%（公司停牌中）",rel:"新材料战略地位凸显",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-29/doc-iniknmic0030571.shtml"},
+{cdate:"2026-07-31",co:"卓易信息",ind:"通用人工智能",t1:"股份回购",title:"回购落地首笔1399万，获中行3600万专项贷款",rel:"算力底座企业价值维护",src:"财中社",url:"https://m.jrj.com.cn/madapter/finance/2026/07/23170457882284.shtml"},
+{cdate:"2026-07-31",co:"灵鸽科技",ind:"通用人工智能",t1:"业绩增长",title:"Q1营收增161%，承接固态电解质中试线",rel:"切入固态电池装备",src:"东方财富",url:"https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html"},
+{cdate:"2026-07-31",co:"中辰股份",ind:"电线电缆",t1:"中标",title:"7月中标新能源电缆约2.4亿元",rel:"电缆企业转型新能源",src:"证券时报",url:"https://www.stcn.com/article/detail/4037549.html"},
+{cdate:"2026-07-31",co:"远程股份",ind:"电线电缆",t1:"业绩预警",title:"上半年预亏6000-9000万，铜价高企侵蚀利润",rel:"铜价系统性压力持续",src:"中国证券报",url:"https://paper.cnstock.com/html/2026-07/15/content_2244447.htm"},
+{cdate:"2026-07-31",co:"鹏鹞环保",ind:"节能环保",t1:"业务进展",title:"上半年业务承订额超7.8亿，SEED低碳水厂已落地缅甸",rel:"环保装备出海标杆",src:"东方财富",url:"https://finance.eastmoney.com/a/202605203743216739.html"},
+{cdate:"2026-07-31",co:"立霸股份",ind:"高端装备",t1:"股价异动",title:"连续异动跌超20%，澄清主营正常",rel:"传统制造估值需实质赛道支撑",src:"东方财富",url:"https://wap.eastmoney.com/a/202607223817340238.html"},
+{cdate:"2026-07-31",co:"百信信息",ind:"通用人工智能",t1:"产业布局",title:"宜兴建全国首个RISC-V芯片产业制造基地，一期投资2亿",rel:"芯片生态从材料向制造延伸",src:"无锡市政府网",url:"https://www.wuxi.gov.cn/doc/2026/07/08/4801467.shtml"},
+{cdate:"2026-07-31",co:"英伟达",ind:"集成电路",t1:"数据中心",title:"拟为OpenAI提供2500亿担保建史上最大数据中心",rel:"AI算力全球军备竞赛",src:"新浪财经",url:"https://finance.sina.com.cn/stock/usstock/c/2026-07-27/doc-inikevrt0737790.shtml"},
+{cdate:"2026-07-31",co:"英伟达",ind:"集成电路",t1:"财报",title:"Q2财报超预期，Vera Rubin下半年发货，目标成全球领先CPU供应商",rel:"AI基础设施加速扩张",src:"创投观察台",url:"http://cambridgeuk.telegramn.co/content/20260731-09d40999581.html"}
+];
+
+var allData=DATA_LOCAL.concat(DATA_CHAIN).concat(DATA_TRACK);
+var MODE='day',CUR_VIEW='local';
+var TRACK_COLORS=['#2563EB','#0E5E4E','#C8622D','#7C3AED','#0891B2','#B7791F','#DB2777','#059669','#DC2626','#4F46E5'];
+
+const listEl=document.getElementById("list");
+const cntEl=document.getElementById("cnt");
+const chipN=document.getElementById("chipN");
+const qEl=document.getElementById("q");
+const fInd=document.getElementById("fInd");
+const fType=document.getElementById("fType");
+const fCity=document.getElementById("fCity");
+const fCo=document.getElementById("fCo");
+
+chipN.textContent=allData.length;
+
+// Populate filters from all data + history
+var allForFilter=allData.concat(HISTORY);
+[...new Set(allForFilter.map(function(d){return d.ind}))].forEach(function(v){fInd.add(new Option(v,v))});
+[...new Set(allForFilter.map(function(d){return d.t1||d.type}))].forEach(function(v){fType.add(new Option(v,v))});
+[...new Set(allForFilter.map(function(d){return d.city||"宜兴"}))].forEach(function(v){fCity.add(new Option(v,v))});
+[...new Set(allForFilter.map(function(d){return d.co}))].forEach(function(v){fCo.add(new Option(v,v))});
+
+function switchMode(m){
+  MODE=m;
+  document.getElementById('tabDay').classList.toggle('on',m==='day');
+  document.getElementById('tabHist').classList.toggle('on',m==='hist');
+  document.getElementById('dayView').style.display=m==='day'?'block':'none';
+  document.getElementById('histView').style.display=m==='hist'?'block':'none';
+  if(m==='hist'){renderHist();}
+  else{renderDay();}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function switchView(v){
+  document.querySelectorAll('.view-tab').forEach(function(t){t.classList.toggle('on',t.dataset.v===v)});
+  CUR_VIEW=v;
+  renderDay();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function cardHTML(d,showTrack){
+  return '<div class="card">'+
+    '<div class="co-name">'+d.co+'</div>'+
+    '<div class="top">'+
+      '<span class="badge ind">'+(showTrack&&d.track?d.track:d.ind)+'</span>'+
+      '<span class="badge type">'+d.type+'</span>'+
+      '<span class="badge city">'+d.city+'</span>'+
+      '<span class="badge date">'+d.date+'</span>'+
+    '</div>'+
+    '<div class="gist">'+d.title+'</div>'+
+    '<div class="body-text">'+d.summary+'</div>'+
+    '<div class="rel"><div class="lab">🔺 对宜启示</div><p>'+d.rel+'</p></div>'+
+    '<div class="foot"><a class="srclink" href="'+d.url+'" target="_blank" rel="noopener">来源：'+d.src+'</a></div>'+
+  '</div>';
+}
+
+function renderDay(){
+  var htmlstr='';
+  if(CUR_VIEW==='local'){
+    var data=DATA_LOCAL;
+    cntEl.textContent=data.length;
+    htmlstr='<div class="grp tier2"><span>📍 本地重点企业动态</span><span class="gn">'+data.length+' 条</span></div>';
+    htmlstr+=data.map(function(d){return cardHTML(d,false)}).join('');
+  } else if(CUR_VIEW==='chain'){
+    var data=DATA_CHAIN;
+    cntEl.textContent=data.length;
+    var tiers=[
+      {k:'tier1',n:'🏛️ 传统优势支柱',d:'电线电缆 · 节能环保'},
+      {k:'tier2',n:'🚀 战略新兴主导',d:'集成电路 · 新能源 · 生命健康 · 新材料'},
+      {k:'tier3',n:'🌱 未来培育',d:'通用人工智能 · 高端装备'}
+    ];
+    tiers.forEach(function(tl){
+      var tr=data.filter(function(d){return d.tier===tl.k});
+      if(tr.length){
+        htmlstr+='<div class="grp '+tl.k+'"><span>'+tl.n+'</span><span class="gn">'+tl.d+' · '+tr.length+' 条</span></div>';
+        htmlstr+=tr.map(function(d){return cardHTML(d,false)}).join('');
+      }
+    });
+  } else if(CUR_VIEW==='track'){
+    var data=DATA_TRACK;
+    cntEl.textContent=data.length;
+    var tracks=[];
+    data.forEach(function(d){if(tracks.indexOf(d.track)<0)tracks.push(d.track)});
+    tracks.forEach(function(tk,i){
+      var tr=data.filter(function(d){return d.track===tk});
+      var col=TRACK_COLORS[i%TRACK_COLORS.length];
+      htmlstr+='<div class="grp track" style="background:'+col+';border-left-color:rgba(0,0,0,.22)"><span>🎯 '+tk+'</span><span class="gn">'+tr.length+' 条</span></div>';
+      htmlstr+=tr.map(function(d){return cardHTML(d,true)}).join('');
+    });
+  }
+  listEl.innerHTML=htmlstr||'<div class="empty">暂无动态</div>';
+}
+
+function renderHist(){
+  var q=qEl?qEl.value.trim().toLowerCase():'';
+  var i=fInd?fInd.value:'',t=fType?fType.value:'',c=fCity?fCity.value:'',co=fCo?fCo.value:'';
+  var rows=HISTORY.filter(function(d){
+    return(!i||d.ind===i)&&(!t||(d.t1||d.type)===t)&&(!c||(d.city||'宜兴')===c)&&(!co||d.co===co)&&(!q||(d.co+d.title+d.rel).toLowerCase().includes(q));
+  });
+  document.getElementById('histCnt').textContent=rows.length;
+  var htmlstr='';
+  var dates=[];
+  rows.forEach(function(d){if(dates.indexOf(d.cdate)<0)dates.push(d.cdate)});
+  dates.forEach(function(dt){
+    var dr=rows.filter(function(d){return d.cdate===dt});
+    htmlstr+='<div class="grp hist"><span>📋 '+dt+'</span><span class="gn">'+dr.length+' 条</span></div>';
+    htmlstr+=dr.map(function(d){
+      return '<div class="hist-card">'+
+        '<div class="hc-co">'+d.co+' <span style="font-size:11px;color:var(--sub);font-weight:400">'+d.ind+' · '+(d.t1||d.type)+'</span></div>'+
+        '<div class="hc-title">'+d.title+'</div>'+
+        '<div class="hc-rel">💡 '+d.rel+'</div>'+
+        '<div class="hc-meta"><a href="'+d.url+'" target="_blank" style="color:var(--brand2)">来源：'+d.src+'</a></div>'+
+      '</div>';
+    }).join('');
+  });
+  document.getElementById('histList').innerHTML=htmlstr||'<div class="empty">没有匹配的历史动态</div>';
+}
+
+function render(){renderDay();}
+
+if(qEl)qEl.addEventListener('input',function(){if(MODE==='hist')renderHist()});
+if(fInd)fInd.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+if(fType)fType.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+if(fCity)fCity.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+if(fCo)fCo.addEventListener('change',function(){if(MODE==='hist')renderHist()});
+
+function reset(){
+  if(qEl)qEl.value='';
+  if(fInd)fInd.value='';
+  if(fType)fType.value='';
+  if(fCity)fCity.value='';
+  if(fCo)fCo.value='';
+  if(MODE==='hist')renderHist(); else renderDay();
+}
+
+function exportXLSX(){
+  var data=MODE==='hist'?HISTORY:allData;
+  var ws=XLSX.utils.json_to_sheet(data.map(function(d){
+    return{日期:d.cdate||'2026-08-01',企业:d.co,产业:d.ind,分类:d.t1||d.type,标题:d.title,启示:d.rel,来源:d.src,链接:d.url};
+  }));
+  var wb=XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb,ws,'宜兴企业动态');
+  XLSX.writeFile(wb,'宜兴企业动态_'+(MODE==='hist'?'历史':'当日')+'_20260801.xlsx');
+}
+
+render();
+
+</script>
+</body>
+</html>
