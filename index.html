@@ -124,7 +124,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
     <div class="sub">每日商业动态参阅 · 企业版</div>
     <div class="date">2026-08-05</div>
     <div class="meta">编制：宜兴市商务局 · 来源：交易所公告 / 权威财经媒体 / 政府官网</div>
-    <div class="chip">共 <span id="chipN">23</span> 条重点动态 · 对宜启示</div>
+    <div class="chip">共 <span id="chipN">15</span> 条重点动态 · 对宜启示</div>
   </div>
   <div id="dayView">
     <div class="view-tabs">
@@ -167,7 +167,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 
 // ===== TAB 1: 本地企业 (FULL DETAIL) =====
 const DATA_LOCAL=[
- {
+{
   "co": "卓易信息",
   "ind": "通用人工智能",
   "type": "MCP概念/大涨",
@@ -179,7 +179,7 @@ const DATA_LOCAL=[
   "src": "金融界",
   "url": "https://finance.jrj.com.cn/2026/08/05102058019592.shtml"
  },
- {
+{
   "co": "远东股份",
   "ind": "电线电缆",
   "type": "股价上涨/机构重仓",
@@ -191,7 +191,7 @@ const DATA_LOCAL=[
   "src": "新浪财经",
   "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfwqi5192173.shtml"
  },
- {
+{
   "co": "雅克科技",
   "ind": "集成电路",
   "type": "长鑫产业链/股价上涨",
@@ -203,7 +203,7 @@ const DATA_LOCAL=[
   "src": "36氪",
   "url": "https://www.36kr.com/p/3820129883656577"
  },
- {
+{
   "co": "帝科股份",
   "ind": "新能源",
   "type": "光伏银浆/新项目",
@@ -215,7 +215,7 @@ const DATA_LOCAL=[
   "src": "破桐之叶网",
   "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfwqi5192173.shtml"
  },
- {
+{
   "co": "利通电子",
   "ind": "高端装备",
   "type": "资金流入/算力",
@@ -227,7 +227,7 @@ const DATA_LOCAL=[
   "src": "新浪财经",
   "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfwqi5192173.shtml"
  },
- {
+{
   "co": "英矽智能",
   "ind": "生命健康",
   "type": "AI制药/长鑫效应",
@@ -243,7 +243,7 @@ const DATA_LOCAL=[
 
 // ===== TAB 2: 3+3+N 产业链 (FULL DETAIL) =====
 const DATA_CHAIN=[
- {
+{
   "co": "风华高科",
   "ind": "集成电路",
   "tier": "tier2",
@@ -256,7 +256,7 @@ const DATA_CHAIN=[
   "src": "36氪",
   "url": "https://36kr.com/newsflashes/3925918166907266"
  },
- {
+{
   "co": "三环集团",
   "ind": "集成电路",
   "tier": "tier2",
@@ -269,7 +269,7 @@ const DATA_CHAIN=[
   "src": "富途牛牛",
   "url": "https://news.futunn.com/post/77135713/hong-kong-stock-market-movement-sanhuan-gr"
  },
- {
+{
   "co": "中微公司",
   "ind": "集成电路",
   "tier": "tier2",
@@ -282,7 +282,7 @@ const DATA_CHAIN=[
   "src": "新浪财经",
   "url": "https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimfshr4736780.shtml"
  },
- {
+{
   "co": "宇树科技",
   "ind": "通用人工智能",
   "tier": "tier3",
@@ -295,7 +295,7 @@ const DATA_CHAIN=[
   "src": "36氪",
   "url": "https://36kr.com/newsflashes/3925918166907266"
  },
- {
+{
   "co": "英伟达",
   "ind": "集成电路",
   "tier": "tier2",
@@ -308,7 +308,7 @@ const DATA_CHAIN=[
   "src": "联合新闻网",
   "url": "https://udn.com/news/story/6811/9671342"
  },
- {
+{
   "co": "特斯拉",
   "ind": "新能源",
   "tier": "tier2",
@@ -321,7 +321,7 @@ const DATA_CHAIN=[
   "src": "36氪",
   "url": "https://www.36kr.com/p/3676823068910212"
  },
- {
+{
   "co": "苹果",
   "ind": "科技AI",
   "tier": "tier2",
@@ -334,7 +334,7 @@ const DATA_CHAIN=[
   "src": "36氪",
   "url": "https://36kr.com/p/3925963547268993"
  },
- {
+{
   "co": "微软",
   "ind": "科技AI",
   "tier": "tier2",
@@ -351,19 +351,7 @@ const DATA_CHAIN=[
 
 // ===== TAB 3: 500强及央国企 =====
 const DATA_G500=[
- {
-  "co": "特斯拉",
-  "ind": "汽车新能源",
-  "type": "AI5芯片/SpaceX合作",
-  "date": "08-05",
-  "title": "马斯克直言搞不定AI5特斯拉就完了，SpaceX正与英伟达合作设计卫星算力",
-  "summary": "马斯克公开表示若搞不定AI5芯片特斯拉将面临危机，同时SpaceX正与英伟达合作设计卫星算力部署方案。马斯克联手黄仁勋打造星际AI算力中心，SpaceX只用英伟达GPU因性能最佳，英伟达盘后急拉涨逾2%。",
-  "rel": "特斯拉+SpaceX+英伟达三方合作标志着AI算力基础设施从地面向太空延伸。对宜兴而言，中车时代半导体SiC器件、远东AIDC光纤、银轮液冷都处于AI基础设施产业链的关键环节，行业天花板正在被打破。",
-  "city": "美国",
-  "src": "联合新闻网",
-  "url": "https://udn.com/news/story/6811/9671342"
- },
- {
+{
   "co": "SpaceX",
   "ind": "科技AI",
   "type": "英伟达合作/卫星算力",
@@ -379,101 +367,11 @@ const DATA_G500=[
 
 // ===== TAB 4: 重点赛道 (FULL DETAIL) =====
 const DATA_TRACK=[
- {
-  "co": "宇树科技",
-  "track": "具身智能机器人",
-  "ind": "通用人工智能",
-  "type": "IPO询价/打新",
-  "date": "08-05",
-  "title": "宇树科技科创板IPO启动询价8月10日打新，A股人形机器人第一股即将诞生",
-  "summary": "宇树科技(688836)正式启动科创板IPO询价，8月10日打新，计划募资42亿估值420亿。公司四足机器人累计销量超3万台，2026年产能最高扩至3万台。特斯拉Optimus产线同步启动，人形机器人超级月来临。",
-  "rel": "宇树IPO+特斯拉Optimus量产，全球具身智能从概念验证进入规模生产。灵鸽科技和远航精密有望切入机器人供应链。",
-  "city": "杭州",
-  "src": "36氪",
-  "url": "https://36kr.com/newsflashes/3925918166907266"
- },
- {
-  "co": "风华高科",
-  "track": "MLCC多层陶瓷电容",
-  "ind": "集成电路",
-  "type": "涨停/8天48%",
-  "date": "08-05",
-  "title": "风华高科8天反弹超48%涨停，MLCC国产替代受益日韩涨价+AI服务器需求爆发",
-  "summary": "MLCC龙头风华高科8天反弹超48%涨停。日韩巨头太阳诱电三星电机涨价30%，AI服务器MLCC年增速80%，被动元件进入超级周期。MLCC概念股业绩预喜比例100%。",
-  "rel": "风华高科48%反弹验证MLCC赛道超级景气。宜兴陶瓷材料企业具备切入MLCC粉体供应潜力。",
-  "city": "肇庆",
-  "src": "36氪",
-  "url": "https://36kr.com/newsflashes/3925918166907266"
- },
- {
-  "co": "三环集团",
-  "track": "MLCC多层陶瓷电容",
-  "ind": "集成电路",
-  "type": "业绩预增/日韩涨价",
-  "date": "08-05",
-  "title": "三环集团半年净利预增45%-65%，日韩MLCC巨头涨价催化国产替代加速",
-  "summary": "三环集团港股再涨超4%，上半年净利17.94亿-20.41亿同比预增45%-65%。日韩MLCC巨头涨价30%催化国产替代加速。三环MLCC已与村田三星电机签署战略合作。",
-  "rel": "三环65%业绩预增验证国产MLCC受益日韩涨价红利。宜兴陶瓷材料企业可切入电子陶瓷供应链。",
-  "city": "潮州",
-  "src": "富途牛牛",
-  "url": "https://news.futunn.com/post/77135713/hong-kong-stock-market-movement-sanhuan-gr"
- },
- {
-  "co": "英伟达",
-  "track": "AI算力/Vera Rubin",
-  "ind": "集成电路",
-  "type": "新品/马斯克盛赞",
-  "date": "08-05",
-  "title": "英伟达Vera Rubin获马斯克全面采用，SpaceX只用英伟达GPU，AI算力军备竞赛升级",
-  "summary": "马斯克盛赞英伟达Vera Rubin AI芯片宣告特斯拉SpaceX全面采用。黄仁勋断言AI终极赢家是马斯克。英伟达盘后涨逾2%。AI算力从地面向太空扩展，SpaceX正与英伟达合作设计卫星算力方案。",
-  "rel": "英伟达Vera Rubin+SpaceX星际算力标志着AI基础设施进入太空时代。宜兴中车时代半导体SiC器件是AI电源模块核心元件。",
-  "city": "美国",
-  "src": "联合新闻网",
-  "url": "https://udn.com/news/story/6811/9671342"
- },
- {
-  "co": "特斯拉",
-  "track": "具身智能/AI5",
-  "ind": "高端装备",
-  "type": "AI5芯片/Optimus",
-  "date": "08-05",
-  "title": "马斯克直言搞不定AI5特斯拉就完了，Optimus产线启动，人形机器人+AI芯片双线作战",
-  "summary": "马斯克公开表示若搞不定AI5芯片特斯拉将面临危机。Optimus人形机器人产线正式启动规模化生产。特斯拉同时推进AI芯片自研和具身智能两条战线，形成芯片+机器人闭环。",
-  "rel": "特斯拉AI5+Optimus双线作战展示AI从芯片到终端的全栈布局。宜兴机器人供应链企业有望切入，灵鸽科技和远航精密具备配套潜力。",
-  "city": "美国",
-  "src": "36氪",
-  "url": "https://www.36kr.com/p/3676823068910212"
- },
- {
-  "co": "苹果",
-  "track": "AI终端/硬件大战",
-  "ind": "科技AI",
-  "type": "OpenAI竞争/新品",
-  "date": "08-05",
-  "title": "苹果与OpenAI硬件大战才刚开始，AI终端创新进入白热化，新一代AI芯片即将发布",
-  "summary": "苹果和OpenAI的硬件大战从打官司到挖人全面升级。苹果即将发布搭载新一代AI芯片的新品，从手机到PC全面拥抱AI。AI终端创新周期开启，万亿巨头工业富联涨停。",
-  "rel": "苹果vs OpenAI硬件大战标志AI竞争从软件延伸到终端硬件。利通电子精密结构件、雅克科技前驱体有望受益于AI终端创新周期。",
-  "city": "美国",
-  "src": "36氪",
-  "url": "https://36kr.com/p/3925963547268993"
- },
- {
-  "co": "微软",
-  "track": "AI资本/云计算",
-  "ind": "科技AI",
-  "type": "万亿资本开支",
-  "date": "08-05",
-  "title": "微软五大科技巨头AI资本开支超万亿美元，云计算+AI双轮驱动进入重资本时代",
-  "summary": "微软Meta等五大科技巨头AI资本开支飙逾1万亿美元。微软Q2营收900亿美元超预期，AI基础设施投入持续加码。市场对AI资本回报的审视日趋严格，奖励回报成为新主题。",
-  "rel": "万亿级AI资本开支标志着产业全面进入重资本时代。远东AIDC光纤和银轮液冷处于AI基建产业链关键环节。",
-  "city": "美国",
-  "src": "中央社",
-  "url": "https://www.cna.com.tw/news/ait/202608050046.aspx"
- }
+
 ];
 
 // ===== HISTORY (精简归档) =====
-const HISTORY=[]; // MOVED const HISTORY=[
+const HISTORY=[
 {cdate:"2026-07-31",co:"远东股份",ind:"电线电缆",t1:"股价涨停",title:"7/31涨停、2025扭亏为盈，处置电池资产优化运营",rel:"龙头经营质量修复",src:"中国证券报",url:"https://paper.cnstock.com/html/2026-07/31/content_2250286.htm"},
 {cdate:"2026-07-31",co:"利通电子",ind:"高端装备",t1:"风险提示",title:"高位三日跌超20%发异动，新增50亿授信加码算力",rel:"AI算力赛道风险提示",src:"东方财富",url:"https://finance.eastmoney.com/a/202607303826763815.html"},
 {cdate:"2026-07-31",co:"银轮股份",ind:"高端装备",t1:"订单",title:"数据中心液冷送样获小批订单，开山银轮拿108套BTB液冷系统",rel:"热管理接入AI算力",src:"证券时报",url:"https://www.stcn.com/article/detail/4041494.html"},
