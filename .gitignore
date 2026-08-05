@@ -1,3 +1,14 @@
 node_modules/
 .DS_Store
 *.log
+
+# BEGIN lawrence-managed (do not edit)
+.agents/skills/
+.lawrence/skills/
+.opencode/
+.codex/
+.claude/
+.mcp.json
+AGENTS.md
+CLAUDE.md
+# END lawrence-managed
