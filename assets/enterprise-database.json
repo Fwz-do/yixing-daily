@@ -1,9 +1,9 @@
 {
  "source": "《宜兴企业动态追踪·企业库名单》—— 一、宜兴本地重点企业(31家)分9子行业；二、宜兴上市公司(22家)分9子行业；三、五大前沿赛道TOP10龙头(50家)；四、产业链业务关联库(167家：行业龙头/500强112+央企子公司55)",
  "statDate": "2026-08-06",
- "total": 295,
+ "total": 294,
  "breakdown": {
-  "localDirect": 54,
+  "localDirect": 53,
   "frontierFocus": 49,
   "chainReference": 167,
   "global500": 54
@@ -327,14 +327,6 @@
    "ticker": "603519",
    "market": "沪市",
    "website": "https://www.jsliba.com"
-  },
-  {
-   "name": "灵鸽科技",
-   "ind": "高端装备",
-   "ticker": "920284",
-   "market": "北交",
-   "note": "双重属性：通用人工智能+高端装备",
-   "website": "https://www.lingood.com.cn"
   },
   {
    "name": "远航精密",

@@ -62,8 +62,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .empty{text-align:center;color:var(--sub);padding:50px 20px;font-size:14px}
 .pgfoot{text-align:center;font-size:11px;color:#9aa8a4;padding:18px 20px;line-height:1.8}
 
-.view-tabs{display:flex;gap:0;background:#fff;border-bottom:2px solid var(--brand);position:sticky;top:0;z-index:30}
-.view-tab{flex:1;text-align:center;padding:14px 8px;font-size:14px;font-weight:700;color:var(--sub);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .2s}
+.view-tabs{display:flex;align-items:center;gap:0;background:#fff;border-bottom:2px solid var(--brand);position:sticky;top:0;z-index:30}
+.view-tab{flex:1;text-align:center;padding:8px 2px;font-size:13px;font-weight:700;color:var(--sub);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .2s;min-height:52px;display:flex;align-items:center;justify-content:center;line-height:1.35}
 .view-tab.on{color:var(--brand);border-bottom-color:var(--brand);background:#eef5f2}
 .day-tabs{display:flex;gap:10px;padding:10px 14px;background:#fff;position:sticky;bottom:0;z-index:40;border-top:1px solid var(--line);box-shadow:0 -3px 14px rgba(0,0,0,.08)}
 .day-tab{flex:1;text-align:center;padding:13px;font-size:14px;font-weight:700;color:var(--sub);cursor:pointer;border:1px solid var(--line);background:#eef2f1;border-radius:11px}
@@ -93,7 +93,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
       <g fill="url(#lp)"><path d="M50 14c7 12 7 26 0 40-7-14-7-28 0-40z"/><path d="M50 54C40 44 28 40 16 42c2 14 14 24 34 24z" opacity=".92"/><path d="M50 54c10-10 22-14 34-12-2 14-14 24-34 24z" opacity=".92"/><path d="M50 58C42 46 30 41 20 40c-4 12 2 26 30 30z" opacity=".7"/><path d="M50 58c8-12 20-17 30-18 4 12-2 26-30 30z" opacity=".7"/></g>
     </svg>
     <div style="font-size:21px;font-weight:800;color:#1c2b28;margin-bottom:16px;letter-spacing:.5px">宜兴市重点企业商业动态</div>
-    <div style="font-size:13.5px;color:#5f6f6b;line-height:1.9;margin-bottom:26px">本页面信息属于宜兴商务局<br/>请输入密码继续访问</div>
+    <div style="font-size:13.5px;color:#5f6f6b;line-height:1.9;margin-bottom:26px">请输入密码继续访问</div>
     <input id="pass-input" type="password" inputmode="numeric" placeholder="请输入密码" autocomplete="off"
       style="width:100%;border:1.5px solid #d6e0dd;background:#f5f8f7;border-radius:13px;padding:15px 18px;font-size:15px;color:#1c2b28;outline:none;text-align:center;letter-spacing:2px"/>
     <div id="pass-err" style="display:none;color:#d64545;font-size:12.5px;margin-top:11px">密码错误，请重试</div>
@@ -130,6 +130,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
     <div class="view-tabs">
       <div class="view-tab on" data-v="local" onclick="switchView('local')">📍 本地企业</div>
       <div class="view-tab" data-v="chain" onclick="switchView('chain')">🔗 3+3+N 产业链</div>
+      <div class="view-tab" data-v="g500" onclick="switchView('g500')">🏢 500强及国央企</div>
       <div class="view-tab" data-v="track" onclick="switchView('track')">🎯 重点赛道</div>
     </div>
     <div class="countbar">当前显示 <b id="cnt">6</b> 条</div>
@@ -222,7 +223,10 @@ const DATA_CHAIN=[
  city:"宜兴",src:"证券时报",url:"http://stock.stockstar.com/RB2026072900008349.shtml"}
 ];
 
-// ===== TAB 3: 重点赛道 (FULL DETAIL) =====
+// ===== TAB 3: 500强及央国企 =====
+const DATA_G500=[];
+
+// ===== TAB 4: 重点赛道 (FULL DETAIL) =====
 const DATA_TRACK=[
 {co:"利通电子",track:"AI算力",ind:"高端装备",type:"风险提示/加码算力",date:"07-30",
  title:"利通电子高位回调三日跌超20%发风险提示，新增50亿授信加码算力、担保额度达120亿",
@@ -242,7 +246,7 @@ const DATA_TRACK=[
 {co:"中国稀土控股",track:"稀土新材料",ind:"集成电路",type:"行业景气",date:"07-29",
  title:"稀土价格高位运行，氧化镨钕同比涨71.7%；中国稀土控股仍停牌、推进复牌",
  summary:"2026年稀土价格持续高企，中国稀土行业协会稀土价格指数7月末维持在268-270高位，主要轻稀土产品氧化镨钕均价约73.99万元/吨、较2025年上半年同期上涨71.7%，主因供给端开采冶炼指标增速放缓（首批同比仅增5.2%）叠加新能源车、机器人需求快增（上半年新能源车产量超700万辆、工业机器人产量同比增47.8%）。宜兴关联的中国稀土控股（00769.HK）自2025年6月18日起停牌，7月9日迁址并披露复牌进展季度更新。",
- rel:"稀土价格的强势为宜兴新材料产业提供了有利的行业背景。稀土是新能源汽车驱动电机、人形机器人关节、风电等的战略性原材料，价格上涨反映下游高端制造需求旺盛。对宜兴而言，虽然中国稀土控股目前仍处停牌整改期、短期不具投资参考性，但稀土作为工业维生素的战略地位持续凸显，与宜兴的新能源（远东电池、宜锂）、高端装备（灵鸽、远航精密）产业存在上下游联动。行业景气与个别企业的合规整改需分开看待，产业机会仍在。",
+ rel:"稀土价格的强势为宜兴新材料产业提供了有利的行业背景。稀土是新能源汽车驱动电机、人形机器人关节、风电等的战略性原材料，价格上涨反映下游高端制造需求旺盛。对宜兴而言，虽然中国稀土控股目前仍处停牌整改期、短期不具投资参考性，但稀土作为工业维生素的战略地位持续凸显，与宜兴的新能源（远东电池、宜锂）、高端装备（远航精密）产业存在上下游联动。行业景气与个别企业的合规整改需分开看待，产业机会仍在。",
  city:"宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/wm/2026-07-29/doc-iniknmic0030571.shtml"}
 ];
 
@@ -278,11 +282,11 @@ const HISTORY=[
 {cdate:"2026-07-30",co:"恒兴新材",ind:"新材料",t1:"投资扩产",title:"投资6亿启动两大新材料项目",rel:"向湿电子化学品延伸",src:"证券时报",url:"https://www.stcn.com/article/detail/4047540.html"},
 {cdate:"2026-07-30",co:"英矽智能",ind:"生命健康",t1:"重大合作",title:"与SK Biopharma 25亿美元合作",rel:"AI制药第一股落户宜兴",src:"新浪财经",url:"https://finance.sina.com.cn/roll/2026-07-27/doc-inikfxaz3079350.shtml"},
 {cdate:"2026-07-30",co:"利通电子",ind:"高端装备",t1:"业绩爆发",title:"上半年净利预增1173%-1368%",rel:"算力租赁业务爆发",src:"同花顺",url:"https://m.10jqka.com.cn/20260714/c678162475.shtml"},
-{cdate:"2026-07-30",co:"灵鸽科技",ind:"通用人工智能",t1:"业绩增长",title:"Q1营收增161%，承接固态电解质中试线",rel:"切入固态电池装备",src:"东方财富",url:"https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html"},
+
 {cdate:"2026-07-30",co:"远航精密",ind:"高端装备",t1:"战略投资",title:"镍带项目推进，战略投资宜锂科技",rel:"镍基材料垂直一体化",src:"东方财富",url:"https://finance.eastmoney.com/a/202603093666298837.html"}
 ];
 
-var allData=DATA_LOCAL.concat(DATA_CHAIN).concat(DATA_TRACK);
+var allData=DATA_LOCAL.concat(DATA_CHAIN).concat(DATA_G500).concat(DATA_TRACK);
 var MODE='day',CUR_VIEW='local';
 // 重点赛道分组配色（撞色，一眼分区）
 var TRACK_COLORS=['#2563EB','#0E5E4E','#C8622D','#7C3AED','#0891B2','#B7791F','#DB2777','#059669','#DC2626','#4F46E5'];
@@ -361,6 +365,11 @@ function renderDay(){
         htmlstr+=tr.map(function(d){return cardHTML(d,false)}).join('');
       }
     });
+  } else if(CUR_VIEW==='g500'){
+    var data=DATA_G500;
+    cntEl.textContent=data.length;
+    htmlstr='<div class="grp tier2"><span>🏢 500强及央国企动态</span><span class="gn">'+data.length+' 条</span></div>';
+    htmlstr+=data.map(function(d){return cardHTML(d,false)}).join('');
   } else if(CUR_VIEW==='track'){
     var data=DATA_TRACK;
     cntEl.textContent=data.length;
