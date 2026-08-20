@@ -326,11 +326,11 @@ function reset(){
 function exportXLSX(){
   var data=MODE==='hist'?HISTORY:allData;
   var ws=XLSX.utils.json_to_sheet(data.map(function(d){
-    return{日期:d.cdate||'2026-08-19',企业:d.co,产业:d.ind,分类:d.t1||d.type,标题:d.title,启示:d.rel,来源:d.src,链接:d.url};
+    return{日期:d.cdate||'2026-08-20',企业:d.co,产业:d.ind,分类:d.t1||d.type,标题:d.title,启示:d.rel,来源:d.src,链接:d.url};
   }));
   var wb=XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb,ws,'宜兴企业动态');
-  XLSX.writeFile(wb,'宜兴企业动态_'+(MODE==='hist'?'历史':'当日')+'_20260819.xlsx');
+  XLSX.writeFile(wb,'宜兴企业动态_'+(MODE==='hist'?'历史':'当日')+'_20260820.xlsx');
 }
 
 render();
